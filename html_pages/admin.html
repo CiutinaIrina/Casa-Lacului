@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Casa Lacului</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="jquery-3.5.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="scripty.js"></script>
+    </head>
+    <div id="revelion">
+        Am dat revelionul? <button onclick="booked(this.parent)">DA</button><button>NU</button>
+    </div>
+</html>
+<script>
+    
+    $(document).ready(() => {
+        $("#revelion").on("click", event => {
+            $("#revelionFULL").removeClass("hidden");
+
+        })
+    })
+</script>

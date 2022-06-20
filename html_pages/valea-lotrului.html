@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Casa Lacului</title>
+    <link rel="icon" href="..\pics\favicon.png">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripty.js"></script>
+</head>
+    
+<body class="container-fluid m-0 p-0 w-100">
+    <div id="site" class="container-fluid m-0 p-0 w-100" style="background-image: url('../pics/background2.jpg')">
+        <header class="h-10">
+            <div class="container-fluid d-flex h-100 w-100">
+                <div id="logo"class="align-self-center">
+                    <a href="..\index.html"><img src="..\pics\logo3.png"></a>
+                </div>
+                <nav id="pc-navbar" class="w-75 text-nowrap">
+                    <ul class="float-right h-100 d-flex" style="list-style: none;">
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <a href="..\index.html" class="h-100"><p class="dropbtn text-size-20">ACASA</p></a>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <filler class="h-100">
+                            <p class="dropbtn text-size-20">DESPRE PENSIUNE</p>
+                            <div class="slideup dropdown-content pa">
+                                <a href="unde-suntem.html"><div class="dropdown-option">Unde suntem?</div></a>
+                                <a href="ce-va-oferim.html"><div class="dropdown-option">Ce va oferim?</div></a>
+                                <a href="programul-pensiunii.html"><div class="dropdown-option">Programul pensiunii</div></a>
+                            </div>
+                            </filler>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">   
+                            <filler>
+                            <p class="dropbtn text-size-20">TARIFE SI SERVICII</p>
+                            <div class="slideup dropdown-content pa">
+                                <a href="tarife.html"><div class="dropdown-option">Tarife</div></a>
+                                <a href="mancare-bautura.html"><div class="dropdown-option">Mancare si bautura</div></a>
+                                <a href="rezervari-plata.html"><div class="dropdown-option">Rezervari si Plata</div></a>
+                                <a href="termeni-conditii.html"><div class="dropdown-option">Termeni si conditii</div></a>
+                            </div>
+                            </filler>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <a href="galerie.html" class="h-100"><p class="dropbtn mb-3 text-size-20">GALERIE FOTO</p></a>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <filler>
+                            <p class="dropbtn text-size-20">INFORMATII UTILE</p>
+                            <div class="slideup dropdown-content pa">
+                                <a href="ce-facem.html"><div class="dropdown-option">Ce poti face la noi</div></a>
+                                <a href="valea-lotrului.html"><div class="dropdown-option">Valea Lotrului</div></a>
+                                <a href="haiduci-panduri.html"><div class="dropdown-option">Haiduci si Paduri</div></a>
+                                <a href="siguranta.html"><div class="dropdown-option">Informatii pentru siguranta dvs.</div></a>
+                            </div>
+                            </filler>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <a href="contact.html"><p class="dropbtn mb-3 text-size-20">CONTACT/REZERVARE</p></a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav id="mobile-navbar">
+                    <div class="h-100 w-100 text-center">
+                        <img class="h-50 w-50 mt-4 picture-white" id="hamburger" src="..\pics\hamburger.png">
+                    </div>
+                </nav>
+            </div>
+            <div id="mobile-navbar-dropdown" class="slideup text-special">
+                <ul class="m-0 p-0" style="list-style: none;">
+                    <li class="position-relative h-100 text-special">
+                        <a href="..\index.html" class="h-100"><p class="pl-4 py-0 m-0 text-size-20 text-special">ACASA</p></a>
+                    </li>
+                    <li class="position-relative h-100 text-special">
+                        <filler class="h-100 d-flex justify-content-between">
+                        <p class="pl-4 py-0 m-0 text-size-20">DESPRE PENSIUNE</p>
+                        <img id="arrow-1" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="..\pics\up.png">
+                        </filler>
+                    </li>
+                    <div id="arrow-dropdown-1" class="slideup pl-5">
+                        <a href="unde-suntem.html"><div class="text-special">Unde suntem?</div></a>
+                        <a href="ce-va-oferim.html"><div class="text-special">Ce va oferim?</div></a>
+                        <a href="programul-pensiunii.html"><div class="text-special">Programul pensiunii</div></a>
+                    </div>
+                    <li class="position-relative h-100 text-special">   
+                        <filler class="h-100 w-100 d-flex justify-content-between">
+                        <p class="pl-4 py-0 m-0 text-size-20 w-90">TARIFE SI SERVICII</p>
+                        <img id="arrow-2" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="..\pics\up.png">
+                        </filler>
+                    </li>
+                    <div id="arrow-dropdown-2" class="slideup pl-5">
+                        <a href="tarife.html"><div class="dropdown-option text-special">Tarife</div></a>
+                        <a href="mancare-bautura.html"><div class="dropdown-option text-special">Mancare si bautura</div></a>
+                        <a href="rezervari-plata.html"><div class="dropdown-option text-special">Rezervari si Plata</div></a>
+                        <a href="termeni-conditii.html"><div class="dropdown-option text-special">Termeni si conditii</div></a>
+                    </div>
+                    <li class="position-relative h-100 text-special">
+                        <a href="galerie.html" class="h-100"><p class="pl-4 py-0 m-0 text-size-20 text-special">GALERIE FOTO</p></a>
+                    </li>
+                    <li class="position-relative h-100 text-special">
+                        <filler class="h-100 d-flex justify-content-between">
+                        <p class="pl-4 py-0 m-0 text-size-20">INFORMATII UTILE</p>
+                        <img id="arrow-3" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="..\pics\up.png">
+                        </filler>
+                    </li>
+                    <div id="arrow-dropdown-3" class="slideup pl-5">
+                        <a href="ce-facem.html"><div class="dropdown-option text-special">Ce poti face la noi</div></a>
+                        <a href="valea-lotrului.html"><div class="dropdown-option text-special">Valea Lotrului</div></a>
+                        <a href="haiduci-paduri.html"><div class="dropdown-option text-special">Haiduci si Paduri</div></a>
+                        <a href="siguranta.html"><div class="dropdown-option text-special">Informatii pentru siguranta dvs.</div></a>
+                    </div>
+                    <li class="position-relative h-100 text-special">
+                        <a href="contact.html"><p class="pl-4 py-0 m-0 mb-3 text-size-20 text-special">CONTACT/REZERVARE</p></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <section class="h-80 w-100">
+            <div class="container-fluid h-100 w-100">
+                <div class="container-fluid box-color h-auto w-90 justify-content-center text-special mt-5 p-5">
+                    <h1 class="mt-1">Valea Lotrului</h1>
+                    <div class="w-25 quick-select">
+                        <div class="d-flex">
+                            <h4 class="mr-4"">Content</h4>
+                            <p id="show-button" class="toggle hidden pt-1">SHOW</p>
+                            <p id="hide-button" class="toggle active pt-1">HIDE</p>
+                        </div>
+                            <div id="list-of-content" class="active">
+                            <a href="valea-lotrului.html#vl1" class="no-highlight"><p>1. Raul Lotru</p></a>
+                            <a href="valea-lotrului.html#vl2" class="no-highlight"><p>2. Istoricul Cercetatorilor</p></a>
+                            <a href="valea-lotrului.html#vl3" class="no-highlight"><p>3. Geografie si Trasee Turistice</p></a>
+                            <a href="valea-lotrului.html#vl4" class="no-highlight"><p>4. Comuna Malaia</p></a>
+                            <a href="valea-lotrului.html#vl4.1" class="no-highlight"><p class="m-1 mr-2">4.1 Atestare Documentara</p></a>
+                            <a href="valea-lotrului.html#vl4.2" class="no-highlight"><p class="m-1 mr-2">4.2 Toponime</p></a>
+                            <a href="valea-lotrului.html#vl4.3" class="no-highlight"><p class="m-1 mr-2">4.3 Ciunget</p></a>
+                            <a href="valea-lotrului.html#vl4.4" class="no-highlight"><p class="m-1 mr-2">4.4 Asezare</p></a>
+                        </div>
+                    </div>
+                    <h3 id="vl1" class="m-4">Raul Lotru</h3>
+                    <div name="Raul Lotru">
+                        <p class="m-1"><w>____</w><w>____</w>Situat in inima Carpatilor Meridionali, bazinul Lotrului se desfasoara ca o uriasa mâna desprinsa din Olt, ale carei
+                        degete rasfirate se ating la mari departari de bazinele altor râuri importante, intrate de mult în istoria tarii
+                        noastre.</p>
+                        <p class="m-1"><w>____</w><w>____</w>De sub coasta Parângului, din circurile glaciare aflate sub creasta Iezerului, a Gâlcescului si Coastei lui Rus, micile
+                        firisoare de apa ce se pravalesc zgomotos peste sau pe sub blocuri haotice de grohotis se unesc mai jos pentru a da
+                        nastere unui râu puternic, vijelios, care coboara din golul alpin, se afunda în întunecimea padurii de molid,
+                        îndreptându-si cursul spre nord.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Dar molidul tainic, împacat de când lumea cu linistea, nu poate domestici râul navalnic al carui debit creste permanent
+                        prin aportul modest dar constant al numeroaselor pâraie ce coboara din culmile vecine. Mai jos ruptura de panta devine
+                        si mai accentuata, apele Lotrului fiind nevoite sa se pravaleasca în cascade înspumate, care vuiesc în sihla umeda a
+                        padurii.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Abia catre Podul Stefanului se mai linistesc, curgând printre Luncile lui Rusalim pâna la Obârsia Lotrului, unde, dupa
+                        ce primeste un afluent de seama – pâraul Pravaletului – îsi schimba definitiv cursul îndreptându-se spre rasarit. Curge
+                        înca 4-5 km, repezindu-si apele în cascadele create de oameni pentru dezvoltarea în bune conditii a pestilor, poposind
+                        în lacul de la Vidra. De aici apele sale vor patrunde printr-o galerie sapata în talpa muntilor pâna la Ciunget, unde,
+                        dupa ce rotesc palele turbinelor, ies la lumina la coada lacului Malaia, dupa un curs subteran de peste 20 km.
+                        În aval de barajul Vidra, la numai un kilometru, un fir de apa razbate iar in vechea albie, acum parca prea mare pentru
+                        el. Treptat acesta creste, afluentii mai aducând putin prinos de apa din ce-a mai ramas dupa captarea debitului
+                        principal.</p>
+                        <p class="m-1"><w>____</w><w>____</w>La Balindru o alta stavila, de data asta din beton, se ridica în cale. Apele adunate din nou într-un lac sunt urcate cu
+                        ajutorul unor pompe uriase si silite sa se întoarca în lacul de la Vidra printr-o galerie subterana.</p>
+                        <p class="m-1"><w>____</w><w>____</w>De aici spre aval încep vestitele cataracte ale Lotrului. Dar apa, din nou saracita în debit, abia razbeste printre
+                        gramezile de nisip ce se aduna de câtiva ani de la exploatarea miniera, încarcându-se cu suspensii solide. Culoarea ei
+                        devine galbuie, contrastând cu verdele padurilor din jur. Dupa ce iti îmbogateste apele cu cele ale unor afluenti din
+                        versantul stâng, curge domol inconjurat de arini tineri pâna la Voineasa, unde primeste afluenti de seama – Manaileasa
+                        pe dreapta si Voinesita pe stânga. Sporindu-si astfel debitul, paraseste Voineasa încolacindu-se ca un ssrpe la Piatra
+                        Taiata, pentru ca la Gura Latoritei sa primeasca apele curate ale Latoritei.</p>
+                        <p class="m-1"><w>____</w><w>____</w>În continuare, dupa ce au trecut peste palele turbinelor hidrocentralei de la Malaia, sunt conduse printr-un canal de
+                        fuga pâna aproape de iesirea din perimetrul localitatii. Aici însa se opresc iarasi în lacul de acumulare de la
+                        Bradisor. De aici apele Lotrului vor curge printr-o albie noua, subterana, unindu-se cu undele întunecate ale Oltului la
+                        Cârligu Mare.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Asadar Lotrul, un râu puternic de munte ce strabate navalnic codrii desi de molid ducând adesea cu apele sale bustenii
+                        sloboziti de pe maluri, si-a schimbat în ultimul deceniu nu numai configuratia hidrografica, dar si destinatia sa în
+                        viata si activitatea oamenilor din tinutul sau.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Bazinul Lotrului se întinde pe o suprafata de 1024 km2, fiind mai îngust spre varsare si mult mai larg în partea
+                        mijlocie. Spre nord se învecineaza cu bazinul râului Sadu si partial cu bazinul Sebesului. La vest, de la Obârsia
+                        Lotrului spre izvoare are ca vecin bazinul Jietului, râu care coboara paralel cu Lotrul din muntii Parâng,
+                        îndreptându-se apoi spre Jiul de Est. Spre sud se apropie de bazinul Lotrului izvoare a numeroase râuri ca : Oltetul,
+                        Cerna, Luncavatul, Bistricioara, Bistrita, Costesti, Cheia si Olanesti. Bazinele lor sunt separate de cel al Lotrului de
+                        catre culmea muntilor Capatânii, care, începând de la Curmatura Oltetului, se desfasoara spre est pâna la Olt. Tot spre
+                        sud, bazinul Lotrului se învecineaza partial cu cel al Gilortului, de care îl separa o culme estica a muntilor Parâng ce
+                        se intinde de la Coasta lui Rus pâna la Vârful Papusa.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Limita dintre bazinul Lotrului si cel al Sadului se situeaza pe culmea muntilor Lotrului , (Steflesti), iar spre apus o
+                        culme, ce porneste din vârful Coasta lui Rus si se întinde pâna la Poiana Muierii, separa bazinul Lotrului de bazinul
+                        Jiului.</p>
+                    </div>
+                    <h3 id="vl2" class="m-4">Istoricul Cercetatorilor</h3>
+                    <div name="Istoricul Cercetatorilor">
+                        <p class="m-1"><w>____</w><w>____</w>În spatiul geografic depresionar cunoscut si sub numele de Ţara Lovistei, o buna parte din teritoriu se întinde pe Valea
+                        Lotrului pâna la Voineasa. Desi tinutul era izolat si îndepartat de asezarile umane, conditiile naturale favorabile au
+                        permis constituirea unor colectivitati umane înca din vremurile cele mai vechi.</p>
+                        <p class="m-1"><w>____</w><w>____</w>O veche legenda locala, pastrata în baladele si cântecele populare, aduce precizari legate de formarea satelor de pe
+                        Valea Lotrului. Aici, în linistea tainica a padurilor de nepatruns, ca si în pesteri izolate, si-au gasit adapost cete
+                        de haiduci cautate pe poterele unei stapâniri apasatoare. Tot mai des în veacurile trecute, aceasta vale salbatica era
+                        numita “valea lotrilor”, ceea ce în vechea limba româneasca avea întelesul de “valea hotilor”. Cu trecerea anilor, unele
+                        capetenii de haiduci s-au lasat de haiducie, stabilindu-se în câte un loc adapostit si infiintand câte un sat. Conform
+                        acestei legende, Breazu si ceata lui se stabileste la varsarea Lotrului, formând asezarea Brezoi, Malai urca pe firul
+                        râului, mai sus, întemeind satul Malaia, iar Ciungu si Voinea patrund adânc în sihla padurii punând bazele asezarilor
+                        Ciunget si respectiv Voineasa.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Desigur, aceasta este o legenda ca multe altele pastrate în graiul viu al locuitorilor, dar si aici, ca si în alte
+                        locuri, adevarul istoric este altul. O serie de urme materiale si documente atesta existenta unor vechi colectivitati
+                        umane pe Valea Lotrului. Fragmente de ceramica apartinând culturii Glina III, descoperite în apropiere de Pestera
+                        Laptelui de la Ciunget, indica prezenta unor locuitori înca din neolitic, respectiv din epoca bronzului.
+                        Urme ale perioadei imediat urmatoare, de trecere la epoca fierului, au fost gasite sub forma unor morminte de
+                        incineratie în ciste sau cutii de piatra, în necropola de la Valea lui Stan. Se considera ca acest tip de morminte este
+                        unic între Carpati si Olt, reprezentând un element al culturii tracice, care sta la baza culturii si unitatii geto-dace
+                        din a doua epoca a fierului(epoca Latene).</p>
+                        <p class="m-1"><w>____</w><w>____</w>O moneda de aur cu legenda Coson, descoperita la Brezoi, datând din anul 43 i.e.n, atesta prezenta unor asezari dacice
+                        pe aceste meleaguri, iar in timpul cuceririi Daciei de catre romani, acestia construiesc la Gura Lotrului un turn de
+                        paza, având rolul de a apara drumul construit pe malul stâng al Oltului. Grigore Tocilescu a descoperit acolo o moneda
+                        si o statueta, care însa au fost pierdute în timpul celui de-al doilea razboi mondial.
+                        Într-un studiu monumental referitor la geografia istorica a Ţarii Lovistei, Ion Conea citeaza o serie de documente din
+                        perioada anilor 1233, 1265 si 1311 în care se aminteste de tinutul Lovistei ca despre o “Terra”, precum si de râul
+                        Lothur (Lotru). În plus, acelasi autor mentioneaza existenta unor documente din anii 1394 si 1451 în care se vorbeste de
+                        proprietatea Manaileasa apartinand oamenilor din Lovistea.</p>
+                        <p class="m-1"><w>____</w><w>____</w>În perioada respectiva, Ţara Lovistei este disputata între stapânirea habsburgica din nord si voievodatele românesti din
+                        sud. Primul document scris, din care rezulta existenta unei populatii asezate pe Lotru, este hrisovul lui Radu cel Mare
+                        din 20 ianuarie 1505, prin care se întareste mânastirii Cozia vama de la Genune(Câineni). Astfel, în hrisov se specifica
+                        : “lotrenii care vor fi negustori si vor purta cumparaturi din tara domniei mele sau de la unguri, toti lotrenii sa
+                        plateasca vama sfintei mânastiri, pentru ca pe acel om care nu va plati vama sfintei mânastiri si cât este aceea ce se
+                        cuvine, pe un asemenea om astfel sa stie ca-l vom pune în teapa la vad”.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Este cert deci ca resursele economice ale locuitorilor permiteau desfasurarea unui comert, atât în tara(Ţara Româneasca)
+                        cât si în Transilvania, produsele fiind transportate uneori pe cararile muntilor spre a evita vama. Asa cum atesta
+                        numeroase documente ulterioare, mânastirea Cozia a stapanit secole de-a rândul aceste tinuturi, satele de mosneni
+                        contribuind din plin la cresterea avutiilor mânastiresti. Satenii erau obligati sa plateasca numeroase dijme în produse
+                        naturale(lemn, miere, lâna) dar si în aur, pe care il extrageau din apele Lotrului prin procedee manuale.
+                        Sunt mentionate în documentele vremii numeroase conflicte între locuitorii satelor de pe Valea Lotrului si
+                        reprezentantii mânastirii Cozia, determinate de cresterea continua a exploatarii.</p>
+                        <p class="m-1"><w>____</w><w>____</w>De asemenea, într-un document emis în vremea lui Matei Basarab, se aminteste de plaiesii de pe Lotru, care aveau rolul
+                        de a pazi muntii de pe linia granitei cu Transilvania, fiind scutiti de alte obligatii fata de domnie. Zona de granita
+                        se întindea pe culmea muntilor Lotrului, urmele bornelor fiind si astazi vizibile.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Asezarile erau organizate în obsti, care reprezentau în principal comunitati de munca. Conducerea obstei stabilea
+                        dreptul de folosinta a padurilor de catre fiecare familie, având totodata dreptul la judecata.
+                        Sub aceasta forma si-au dus existenta satele de pe Valea Lotrului pâna la începutul secolului XIX, când încep
+                        exploatarile forestiere, care aduc un nou suflu de viata, dar si o noua exploatare a muncii în aceasta vale a linittii
+                        si izolarii.</p>
+                        <p class="m-1"><w>____</w><w>____</w>În conditiile unei asupriri crâncene, numerosi razvratiti au luat drumul codrului, alaturi de cei veniti din tinuturi
+                        mai îndepartate, constituind cete de haiduci. Actiunile lor, mai mult de razbunare, razbat pâna astazi în bogatul
+                        folclor local ce se mai pastreaza în satele de pe Valea Lotrului, ca si în legende de tipul celei amintite.
+                        Alexandru Odobescu, în cunoscuta sa calatorie prin tinuturile Argesului si Vâlcii, efectueaza sn 1860, trecând pe la
+                        Gura Lotrului în drum spre Cozia, afla din relatarile unor plutasi de pe Olt ca : .”Satele de pe Lotru sunt cu toate
+                        vreo patru, din care Malaia si Voineasa, cele din urma sunt mai însemnate ; carul abia merge pâna-n Malaia ; iar de
+                        acolo înainte abia poti merge calare prin matca Lotrului si peste vai, pâna-n Voineasa, iti trebuieste ca la o zi sa
+                        faci aceasta calatorie. Pe acolo toti satenii sunt mosneni, dar nu cunosc lucrul agriculturii, ci se hranesc mai mult cu
+                        vitele si cu taierea brazilor de prin paduri; cei care n-au iesit din satele lor nu stiu cum e facut carul”.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Treptat începe sa se diferentieze localitatea Brezoi, care prin asezarea sa în apropiere de drumul de pe Valea Oltului,
+                        cunoscut si sub numele de “Via Carolina”, refacut în primele decenii ale secolului XIX, beneficia de numeroase legaturi
+                        comerciale, astfel ca în 1864 devine prima comuna de pe Valea Lotrului. De la aceasta data dezvoltarea localitatii
+                        devine mai rapida si influenteaza, odata cu dezvoltarea industriei de prelucrare a lemnului, si localitatile Malaia si
+                        Voineasa.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Un eveniment deosebit care a afectat puternic viata si activitatea locuitorilor a fost razboiul din 1916-1918, care,
+                        prin pierderile de vieti omenesti si materiale, a ramas puternic imprimat în inima si constiinta oamenilor.
+                        Înca din primavara anului 1915 începe în defileul Oltului concentrarea de trupe apartinând Grupului Olt-Lotru, al carui
+                        comandament se stabileste la Brezoi. Se refac podurile si terasamentele drumurilor si începe constructia drumului
+                        strategic de pe culmea muntilor Latoritei, precum si largirea potecilor de munte. Pe vârfurile Robu si Veveretul, ca si
+                        pe alte culmi din apropiere, se construiesc fortificatii. Trupele apartinând subgrupului Lotru erau formate din
+                        regimentul 5 vânatori, regimentul 2 infanterie, batalionul 1/44 infanterie si 4 baterii de artilerie. La 15 august 1916,
+                        au intrat în lupta primele formatiuni. Lupte grele s-au dat în defileul Oltului, care constituia principala poarta de
+                        strapungere a Carpatilor. Trupele noastre, din care faceau parte numerosi soldati de pe Valea Lotrului, constituiti în
+                        detasamente ce purtau numele localitatilor de unde proveneau, au rezistat eroic pâna la sfârsitul lunii octombrie, când
+                        presiunea si ofensiva inamicului impun retragerea.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Au cazut la datorie în aceste lupte, alaturi de generalul Praporgescu, comandantul Grupului Olt, numerosi fii ai
+                        tinuturilor Lotrului. Acestor lupte le sta marturie azi monumentul ridicat în 1922 la Brezoi, pe frontispiciul caruia
+                        sunt înscrise numele eroilor care si-au jertfit viata în acest razboi pentru întregirea neamului.
+                        În perioada de ocupatie inamica, populatia a fost supusa unei crunte exploatari, prin acapararea unor importante
+                        cantitati de produse alimentare. În acelasi timp se intensifica extragerea aurului din mina de la Valea lui Stan, a
+                        carei productie atinge 18 kg de aur si 6 kg de argint, si încep exploatarile de mica de la Cataracte.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Dupa primul razboi mondial, odata cu intensificarea exploatarilor forestiere, asuprirea si viata grea a muncitorilor
+                        sunt din ce în ce mai greu resimtite. Conditiile neigienice în care locuiau, lipsa asistentei sanitare, desele accidente
+                        si timpul prelungit de munca(zi lumina) au dus la puternice framântari ale muncitorilor, tncepând cu anul 1919.
+                        În primavara anului 1920 ia nastere la Brezoi o sectie a partidului socialist si tot în acelasi an se înfiinteaza
+                        sindicatul “Valea Lotrului” apartinând muncitorilor forestieri. În acest fel actiunile revendicative devin organizate si
+                        se manifesta mai ales sub forma de greve. Înfiintarea în 1932 a Comitetului Judetean Vâlcea al P.C.R a facut ca miscarea
+                        muncitoreasca sa fie condusa si organizata dupa principii comuniste. Cu toate acestea, situatia muncitorilor se
+                        înrautateste si mai mult prin instaurarea în tara a dictaturii militaro-fasciste. Cresterea enorma a preturilor, în
+                        primul rând la produsele alimentare si la îmbracaminte, obliga la munca grea, de 12 ore pe zi, de care nu sunt crutate
+                        nici femeile si nici minorii. Societatile “Carpatina” si “Vasilatul”, ale caror actiuni erau în crestere datorita
+                        comenzilor de cherestea pentru razboi, nu au luat nici o masura de îmbunatatire a vietii si muncii salariatilor lor. În
+                        aceste conditii, conflictele de munca erau foarte frecvente, iar represiunile stapânirii din ce în ce mai violente.</p>
+                        <p class="m-1"><w>____</w><w>____</w>În 1944 celulele comuniste de la “Carpatina” îsi intensifica manifestarile. Sub conducerea comunistilor se întreprind
+                        actiuni de sabotaj, între care se poate mentiona taierea cablului telefonic german Sibiu – Piatra Olt, în iulie 1944.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Un suflu nou, revolutionar, se instaleaza pe Valea Lotrului dupa insurectia nationala antifascista armata de la 23
+                        august 1944 si mai cu seama dupa nationalizare, când viata economica este reorganizata dupa principii noi care exclud
+                        exploatarea.</p>
+                        <p class="m-1"><w>____</w><w>____</w>În deceniul al saselea al secolului nostru, Valea Lotrului cunoaste o adevarata înflorire prin începerea lucrarilor la
+                        constructia hidrocentralei Lotru – Ciunget.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Valea Lotrului devine astfel o “vale a luminii”.</p>
+                    </div>
+                    <h3 id="vl3" class="m-4">Geografie si Trasee Turistice</h3>
+                    <div name="Geografie si Trasee Turistice">
+                        <p class="m-1"><w>____</w><w>____</w>Principala cale de acces spre Valea Lotrului o constituie drumul national DN 7A ce se ramifica la Gura Lotrului din
+                        drumul european E 15A ce strabate Valea Oltului. Aceasta cale este utilizata si de turistii care, venind cu trenul,
+                        coboara în statia Lotru, folosind apoi mijloace auto pâna la Voineasa.</p>
+                        <p class="m-1"><w>____</w><w>____</w>De la Gura Lotrului (km 0), soseaua asfaltata se îndreapta spre Brezoi (km 3) apoi, urmând Valea Lotrului, strabate
+                        urmatoarele asezari : Valea lui Stan (km 7), Pascoaia (km 12), Saliste (km 14), Malaia (km 23), Valea Macesului (km 31),
+                        ajungând la Voineasa (km 38). La Gura Latoritei (km 30) se ramifica spre stânga soseaua ce duce la Ciunget (km 6) si în
+                        continuare pâna la Petrimanu (km 20).</p>
+                        <p class="m-1"><w>____</w><w>____</w>Din Voineasa, soseaua în curs de asfaltare urca pe valea Manaileasa pâna la lacul Vidra, pe malul caruia se afla
+                        statiunea Vidra (km 61). De acolo, soseaua urmeaza malul drept al lacului Vidra pâna la Obarsia Lotrului (km 78), dupa
+                        care, traversând Curmatura Groapa Seaca, coboara la Petrosani (km 112).</p>
+                        <p class="m-1"><w>____</w><w>____</w>Între Voineasa si lacul Vidra mai exista un drum forestier, deosebit de pitoresc, prin Cataractele Lotrului, trecând pe
+                        la Gura Dobrunului (km 4 de la Voineasa), Gura Hoteagului (km 7), lacul Balindru (km 13), Gura Hanesului (km 17), Gura
+                        Steajei (km 20), Barajul Vidra (km 24), statiunea Vidra (km 27), unindu-se apoi cu DN 7A dupa 28 km.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Cea de-a doua magistrala care taie transversal bazinul superior al Lotrului, desi mai veche, se mentine si azi ca cea
+                        mai înalta sosea alpina a tarii. Aceasta este soseaua Novaci – Sebes (DN 67C), care în saua Urdele atinge altitudinea
+                        maxima de 2145 m, nedepasita nici de Transfagarasean.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Din Novaci, drumul urca pe muntele Cerbul, trece pe lânga ministatiunea Rânca, traverseaza saua Urdele si coboara la
+                        Obarsia Lotrului, dupa 48 km, încrucisându-se cu soseaua Voineasa – Petrosani. De aici acest drum se continua peste saua
+                        Tartarau, patrunde în valea Sebesului, ocoleste lacurile de acumulare existente în bazinul acestui râu si ajunge în
+                        orasul Sebes (distanta Sebes-Obarsia Lotrului – 88 km).</p>
+                        <p class="m-1"><w>____</w><w>____</w>În bazinul Lotrului se mai poate ajunge din valea Polovragi, urmând drumul forestier de pe valea Oltetului, lung de
+                        circa 20 km, pâna la Curmatura Oltetului, si coborând apoi la Petrimanu pe valea Latoritei.</p>
+                        <p class="m-1"><w>____</w><w>____</w>O alta cele de acces, accesibila autoturismelor de teren, poate fi considerata cea de la saua Buceci, unde ajunge drumul
+                        forestier ce urca din valea sadului si coboara pe Pârâul Pietrii în Valea Lotrului, mai sus de Voineasa.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Drumetia în spatiul montan pe trasee marcate care se realizeaza în principal vara :</p>
+                        <p class="m-1"><w>____</w><w>____</w>Trasee turistice în zona orasului Brezoi :</p>
+                        <ul style="margin-left:90px;padding:0px">
+                            <li>Brezoi – Vârful Turtudanul, Brezoi – Valea Doabrei – Varful Sulita,</li>
+                            <li>Brezoi – Valea Satului – Stâna Tarsa – saua Jilisti – M. Dosul Pamântului – Culmea Pârâul Câinelui – Olanesti,</li>
+                            <li>Brezoi – Valea Satului – Stâna Tarsa – Poiana lui Pavel – Valea Lotrisor – Motelul Lotrisor, Brezoi – Culmea Vultureasa
+                            – Vârful Vultureasa – Vârful Narutu,</li>
+                            <li>Brezoi – Vasilatu – Valea Vasilatului – Vârful Poiana Sulitei – Culmea Proieni – Vârful Veveretul,</li>
+                            <li>Brezoi – Valea Glodului, Valea lui Stan – Plaiul lui Stan – saua Suhaioasa – Valea Sasa – Saliste</li>
+                            <li>Trasee turistice cu plecare din Malaia :</li>
+                            <li>Malaia – Vârful Zmeuratul,</li>
+                            <li>Malaia – Valea Malaii – La Ezer – Vârful Ursu,</li>
+                            <li>Malaia – Valea Malaii – Curmatura Ezerului – Valea Repedea – Ciunget ,</li>
+                            <li>Malaia – Varful Pleasa – Vârful Molivisul</li>
+                            <li>Trasee turistice cu plecare din Ciunget :</li>
+                            <li>Ciunget – Valea Latoritei – Lacul Petrimanu,</li>
+                            <li>Ciunget – Valea Latoritei – Curmatura Gropita – Stâna Groapa – saua Funicel,</li>
+                            <li>Ciunget – Izvorul Mierlei – Piatra Târnovului – saua Gropita – Borogeana – Ciunget,</li>
+                            <li>Ciunget – Valea Repedea – Curmatura Funicel, Cabana Petrimanu – Curmaaura Oltetului – Vârful Papusa – saua Urdele –</li>
+                            <li>Muntele stefanu – Obârsia Lotrului, Cabana Petrimanu – Curmatura Oltetului – Varful Papusa – Cabana Rânca,</li>
+                            <li>Ciunget – Vânata – Vârful Paraginosu – Vârful Fratosteanu – Plaiul Poienii – Voineasa, Ciunget – saua Chica Lupului –</li>
+                            <li>Culmea stevia – Plaiul Poienii Nopteasa – Vidra</li>
+                            <li>Trasee turistice în jurul statiunii Voineasa :</li>
+                            <li>Voineasa – Pârâul Cararii – saua Chica Lupului – Ciunget,</li>
+                            <li>Voineasa – Dealul Plaisor, Culmea stevia – Pietrele Albe,</li>
+                            <li>Voineasa – Cataractele Lotrului – Lacul Balindru, Voineasa – Valea Voinesita – Valea Jidoaia – Lacul Jidoaia,</li>
+                            <li>Voineasa – Casa de vânatoare Dobrunu(cu 3 variante),</li>
+                            <li>Voineasa – Gruiul Prejbutei – Vârful Ciresu – saua Chica Lupului – Voineasa,</li>
+                            <li>Voineasa – Vârful Galu – Vârful Dalme – Culmea Sascioare – Voineasa</li>
+                            <li>Trasee turistice în bazinul superior al Lotrului :</li>
+                            <li>Vidra – Curmatura Vidrutei – Vârful Manaileasa Mare,</li>
+                            <li>Vidra – saua Pietrile – Cabana Petrimanu,</li>
+                            <li>Vidra – Cataractele Lotrului – Voineasa,</li>
+                            <li>Vidra – Cabana Obârsia Lotrului,</li>
+                            <li>Cabana Obârsia Lotrului – Cabana Rânca,</li>
+                            <li>Cabana Obârsia Lotrului – Lacul Calcescu – Vârful Coasta lui Rus – saua Cibanu – Obârsia Lotrului,</li>
+                            <li>Cabana Obârsia Lotrului – Pârâul Zanoaga – saua Piatra Taiata – Vârful Parângul Mare – Valea Rosiile – Groapa Seaca –</li>
+                            <li>Obârsia Lotrului,</li>
+                            <li>Cabana Obârsia Lotrului – Curmatura Groapa Seaca – Cheile Jietului – Petrosani,</li>
+                            <li>Cabana Obârsia Lotrului – Poiana Muierii – Cabana Voievodul – Petrila, Cabana Obârsia Lotrului – saua Tartarau – Valea</li>
+                            <li>Frumoasei – saua Steflesti</li>
+                        </ul>
+                    </div>
+                    <h3 id="vl4" class="m-4">Comuna Malaia</h3>
+                    <div name="Comuna Malaia">
+                        <p class="m-1"><w>____</w><w>____</w>Comuna Malaia se află aşezată într-o vatră de istorie şi civilizaţie, care a oferit din cele mai vechi timpuri condiţii
+                        prielnice de locuire a omului pe aceste meleaguri.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Munţii care străjuiesc comuna din toate părţile, ca nişte ziduri ale unei fortăreţe în cea mai mare parte împăduriţi, au
+                        favorizat înfiriparea unei locuiri statornice.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Unele descoperiri arheologice făcute pe teritoriul localităţii au scos la iveală urme din perioada mijlocie a epocii
+                        pietrei, numită mezolitic (10000-5500 î.d.Hr). Din acest timp în peşterile din “masivul Buila, s-au găsit fosile de
+                        ursus spaeleus.” Muntele Buila se află în partea de sud a comunei Malaia. De asemenea tot aici s-au găsit adăposturi
+                        pentru vânători tardenozieni.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Culturile cu caracter tardenozian se caracterizează prin folosirea arcului şi săgeţii. Acum omul a domesticit câinele,
+                        folosit pentru vânat. Desigur că pădurea a oferit condiţii omului pentru hrană necesară, pieile trebuitoare pentru
+                        îmbrăcăminte şi încălţăminte. Evoluţia comunei are loc din antichitate, fiind determinată de activitatea pastoralăşi
+                        agricolă.</p>
+                        <p class="m-1"><w>____</w><w>____</w>În locurile cele mai favorabile s-au stabilit primele familii, mai ales pe versantul drept al Lotrului, unde clima este
+                        mai blândă.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Se pare că atât Latoriţa cât şi Rudăreasa au fost locuite neîntrerupt din cele mai vechi timpuri.
+                        Aceste locuri –bogate în vânat, oferind piatra munţilor şi a pâraielor pentru unelte, izvoare cu apă, păşunea din belşug
+                        au făcut ca pe aceste meleaguri să apară stabile aşezări omeneşti.</p>
+                       <p class="m-1"><w>____</w><w>____</w> Viaţa dacică nu a încetat, după cucerirea romană, în aceste locuri de pe Valea Lotrului.
+                        Întregul defileu al Oltului până la Turnu Roşu era sub controlul roman. Imperiul avea sub supraveghere văile din
+                        Carpaţii Meridionali, stăpânind căile principale de acces spre capitala lui Decebal, deci inclusiv Valea Lotrului.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Valea Oltului şi drumuri de munte au legat cetăţile din Subcarpaţii Vâlceni de cele ale Gorjului şi Transilvaniei, însă
+                        “ele par să fi avut o viaţă istorică oarecum deosebită după dispariţia marelui Burebista.”</p>
+                        <p class="m-1"><w>____</w><w>____</w>Locuitorii acestei văi foloseau potecile munţilor din cele mai vechi timpuri. Oamenii locului ştiu foarte bine potecile,
+                        drumurile şi plaiurile care străbat munţii de prin jurul comunei Mălaia.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Potrivit noilor cercetări istorice se pare că Valea Lotrului a fost leagănul dacilor liberi. Această parte de ţară a
+                        fost eclipsată de Imperiul Roman, mai puţin de două secole prin cetăţile de la Gura Lotrului, Arutela şi Racoviţa.
+                        “Dacii liberi erau două treimi din Dacia nord-dunăreană la care trebuie adăugat bastionul din ţara Lotrului, unde
+                        rezistenţa dacică a durat milenii.”</p>
+                        <p class="m-1"><w>____</w><w>____</w>Valea Lotrului cu munţii falnici şi abrupţi a reprezentat o adevărată fortăreaţă pentru rezistenţa dacilor.
+                        Ceea ce este foarte interesant pentru aceste locuri, din perioada imediat următoare a războiului dintre daci şi romani
+                        este faptul că dacii din munţii Lotrului au participat la răscoala împotriva romanilor, din anul 117 d.Hr. în chiar anul
+                        morţii lui Traian.</p>
+                        <h4 id="vl4.1" class="m-3">Atestare documentară</h4>
+                        <p class="m-1"><w>____</w><w>____</w>Nominalizarea localităţii Mălaia în documente este consemnată începând cu 1 septembrie 1515.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Numele localităţii Mălaia apare pentru prima dată în timpul lui Neagoe Basarab care întăreşte mănăstirii Cozia “munţii
+                        Scărişoara, Călugărul, Cozia şi muntele dintre izvoare până la vârful Belitului, cu toate hotarele munţilor Lotrului de
+                        peste partea Bistriţei, vârful dealul Mălăii, curmătura cea mai adâncă a Mălăii, curmătura cărării Rudăreasa, Piatra
+                        Albă, Piatra Fetei, Pietrele Roşii, Obârşia Repedei, vârful Mălăii, vârful Cocorii, vârful Beliţilor, vârful Terii,
+                        muntele Folii, muntele Foarfeca, muntele Cârlig şi râul Olt”.</p>
+                        <h4 id="vl4.2" class="m-3">Toponime</h4>
+                        <p class="m-1"><w>____</w><w>____</w>Oamenii pământului au dat nume diferitelor forme de relief, faună, floră care în timp au rămas aceleaşi. Multe din
+                        toponime şi antroponime îşi au originea în ocupaţiile locuitorilor.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Cel mai important toponim este cel al numelui satului Mălaia. În privinţa acestui nume cercetătorii au emis mai multe
+                        păreri precum:</p>
+                        <p class="m-1"><w>____</w><w>____</w>1. Agricultura a fost una din preocupările de bază ale geto-dacilor, aceştia practicându-o pe zonele cele mai înalte ale
+                        Carpaţilor. Numele satului ca de altfel şi înălţimile din jurul său ca: Groapa Mălăii, Mălăiele, ape: Mălăiţa Mare,
+                        Mălăiţa Mică, în vatra satului, Piatra Mălăii, Lunca Mălăii îşi au denumirea în îndeletnicirea tradiţională a cultivării
+                        meiului plantă cereală din care se obţinea mălaiul, necesar pentru hrană. Cultura meiului a fost practicată până la
+                        introducerea porumbului în secolul al XVII-lea, când noua plantă se va generaliza, prin calităţile sale nutritive şi de
+                        adaptabilitate la sol şi climă, moştenind însă de la aceasta denumirea pentru făină de porumb “(“mălai”).
+                        Legat de păstrarea recoltelor pe timp mai mare sau pentru a fi apărate de trădători, acestea erau ascunse în gropi,
+                        sistem pe care şi azi localnicii îl mai păstrează dar din alte motive, fapt ce ar explica probabil şi toponimul de
+                        Groapa Mălăii.</p>
+                        <p class="m-1"><w>____</w><w>____</w>2. O altă teorie legată de toponimul Mălaia este că satul a fost întemeiat de haiducul Mălai, care alături de alţi
+                        haiduci Breazu, Voinea şi Ciungu ar fi întemeietorii satelor de pe Lotru respectiv: Brezoi, Voineasa şi Ciunget.
+                        Realitatea este cu totul alta.</p>
+                        <p class="m-1"><w>____</w><w>____</w>3. Lingviştii cred că originea numelui satului ar fi numele unei persoane care ar fi pus bazele aşezării sau ar fi avut
+                        un rol în viaţa acestuia. Mălaia este formă de feminin de la Malu ( nume întâlnit în documente).</p>
+                        <h4 id="vl4.3" class="m-3">Ciunget</h4>
+                        <p class="m-1"><w>____</w><w>____</w>Potrivit legendei întemeietorul satului ar fi fost un haiduc pe nume Ciungu, care s-ar fi aşezat pe aceste locuri.
+                        Ciungetul face parte din comuna Mălaia dintotdeauna. Este aşezat în partea de nord a localităţii.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Se pare că numele satului vine de la obiceiul locuitorilor ciungeteni, păstori şi vânători, care tăiau, “ciungeau”
+                        crengile cu muguri ale copacilor pentru a hrăni caprele şi vitele. În satul Ciunget există toponimul de “Padina cu
+                        Ciungi”.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Ciunget înseamnă pădure de copaci uscaţi, rămaşi în picioare, rupţi la vârf.</p>
+                        <h4 id="vl4.4" class="m-3">Asezare</h4>
+                        <p class="m-1"><w>____</w><w>____</w>Situată în partea central-sudică a României, în partea de nord a judeţului Vâlcea, este încadrată între meridianele de
+                        23˚35’ şi 24˚104’ longitudine esticăşi între paralela de 45˚204 şi 45˚244’ latitudine nordică.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Localitatea Malaia cu satele ce o compun se află la o distanţă de 23 km de Gura Lotrului ( pe drumul european Rm.
+                        Vâlcea-Sibiu): Săliştea situată tot pe Lotru, la 9 km mai jos, respectiv Ciunget, aşezat mai sus de Mălaia la 13 km, la
+                        confluenţa apelor Latoriţa şi Rudăreasa. Mai izolat se găseşte un trup de 7 – 8 case în satul Ciunget , punctul
+                        Rudăreasa .</p>
+                        <p class="m-1"><w>____</w><w>____</w>Se învecinează în partea de nord-est cu comuna Voineasa, la sud cu judeţul Gorj, comunele Vaideeni, Costeşti, Bărbăteşti
+                        şi oraşele Horezu, Băile Olăneşti, iar la est cu oraşul Brezoi.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Comuna Malaia dispune de un relief muntos ( aprox. 90 % din totalul suprafeţei administrative ), posibilităţile de
+                        dezvoltare ale aşezărilor săteşti fiind limitate . Zonele în care sunt aşezate satele comunei , terase ale râului Lotru
+                        şi pârâului Latoriţa , au stabilitate bunăşi sunt ferite de inundaţii , datorită amenajării hidrotehnice a albiilor
+                        râurilor . Lacurile de acumulare controlează variaţia debitului de apă datorită precipitaţiilor căzute amonte în
+                        bazinele hidrografice ale Lotrului şi Latoriţei.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Comuna Malaia este străbătută de drumul naţional DN7A , drumul judeţean DJ701D şi o serie de drumuri principale şi
+                        secundare .</p>
+                        <p class="m-1"><w>____</w><w>____</w>În general starea drumurilor este buna .</p>
+                        <p class="m-1"><w>____</w><w>____</w>Comuna Mălaia este înconjurată de Munţii Lotrului şi Munţii Căpăţânii, despărţiţi de apa Lotrului. Aceşti munţi au
+                        înălţimi mari, mijlocii şi sunt alcătuiţi din şisturi cristaline, cu relief glaciar şi cu intense suprafeţe de denudaţie
+                        dispuse în trepte. Sunt bogaţi în păduri şi păşuni.</p>
+                        <p class="m-1"><w>____</w><w>____</w>În partea de nord de Valea Lotrului se aflămunţii: Molidvişu-1510 m, Mălaia- 1128 m, Robu-1899 m, Mândra- 1952 m, iar în
+                        partea de sud se află munţii: Negovanu-1963 m, Nedeia- 2130 m, Târnovu- 1879 m, Ursu-2134 m, Cocora- 1899 m, Zmeurăt-
+                        1938 m, Preota- 1954 m, Gerea-1886 m, iar de aici culmea munţilor scade treptat până la Olt.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Se observă pe partea dreaptă a Lotrului, în Mălaia suprapunerea unor conuri de dejecţie transportate din munte care au
+                        dus la apariţia unor “ veritabile câmpii piemontane, pe care s-au instalat aşezări omeneşti, iar terenurile sunt
+                        cultivate de către locuitori”. Dintre aceste terase amintim: Podul Rogozului, Podul Ursului, Podul Prejbii, Podul Ronţi,
+                        Podul Cărpănoasei, Podul Străchinii, Podul Căşii, Grinduri, Grot, Podul Vlaicului, Padină.</p>
+                        <p class="m-1"><w>____</w><w>____</w>Pe Latoriţa şi Repedea se pot întâlni roci granitice. Târnovu, Pietrile şi Turcinu sunt munţi calcaroşi apăruţi în era
+                        mezozoică.</p>
+                        <br><br><br>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <script>
+                $(document).ready(() => {
+                    $(".dropdown").on("mouseenter", event => {
+                        $(event.currentTarget.children[0].children[0]).addClass("highlight-cat");
+                        $(event.currentTarget.children[0].children[1]).removeClass("slideup");
+                        $(event.currentTarget.children[0].children[1]).addClass("slidedown");
+                    }).on("mouseleave", event => {
+                        $(event.currentTarget.children[0].children[0]).removeClass("highlight-cat");
+                        $(event.currentTarget.children[0].children[1]).removeClass("slidedown");
+                        $(event.currentTarget.children[0].children[1]).addClass("slideup");
+                    })
+                    $(".dropdown-option").on("mouseenter", event => {
+                        $(event.currentTarget).addClass("highlight-subcat");
+                    }).on("mouseleave", event => {
+                        $(event.currentTarget).removeClass("highlight-subcat");
+                    })
+                    $("#hide-button").on("click", event => {
+                        $("#list-of-content").hide();
+                        $(".quicknav").css("height","60px")
+                        $('#hide-button').hide();
+                        $("#show-button").show();
+                    })
+                    $("#show-button").on("click", event => {
+                        $("#list-of-content").show();
+                        $(".quicknav").css("height", "400px")
+                        $('#show-button').hide();
+                        $("#hide-button").show();
+                    })
+                })
+            </script>
+        </footer>
+    </div>
+</body>
+
+</html>

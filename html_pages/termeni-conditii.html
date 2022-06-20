@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Casa Lacului</title>
+    <link rel="icon" href="..\pics\favicon.png">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripty.js"></script>
+</head>
+    
+<body class="container-fluid m-0 p-0 w-100">
+    <div id="site" class="container-fluid m-0 p-0 w-100" style="background-image: url('../pics/background10.jpg')">
+        <header class="h-10">
+            <div class="container-fluid d-flex h-100 w-100">
+                <div id="logo"class="align-self-center">
+                    <a href="..\index.html"><img src="..\pics\logo3.png"></a>
+                </div>
+                <nav id="pc-navbar" class="w-75 text-nowrap">
+                    <ul class="float-right h-100 d-flex" style="list-style: none;">
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <a href="..\index.html" class="h-100"><p class="dropbtn text-size-20">ACASA</p></a>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <filler class="h-100">
+                            <p class="dropbtn text-size-20">DESPRE PENSIUNE</p>
+                            <div class="slideup dropdown-content pa">
+                                <a href="unde-suntem.html"><div class="dropdown-option">Unde suntem?</div></a>
+                                <a href="ce-va-oferim.html"><div class="dropdown-option">Ce va oferim?</div></a>
+                                <a href="programul-pensiunii.html"><div class="dropdown-option">Programul pensiunii</div></a>
+                            </div>
+                            </filler>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">   
+                            <filler>
+                            <p class="dropbtn text-size-20">TARIFE SI SERVICII</p>
+                            <div class="slideup dropdown-content pa">
+                                <a href="tarife.html"><div class="dropdown-option">Tarife</div></a>
+                                <a href="mancare-bautura.html"><div class="dropdown-option">Mancare si bautura</div></a>
+                                <a href="rezervari-plata.html"><div class="dropdown-option">Rezervari si Plata</div></a>
+                                <a href="termeni-conditii.html"><div class="dropdown-option">Termeni si conditii</div></a>
+                            </div>
+                            </filler>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <a href="galerie.html" class="h-100"><p class="dropbtn mb-3 text-size-20">GALERIE FOTO</p></a>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <filler>
+                            <p class="dropbtn text-size-20">INFORMATII UTILE</p>
+                            <div class="slideup dropdown-content pa">
+                                <a href="ce-facem.html"><div class="dropdown-option">Ce poti face la noi</div></a>
+                                <a href="valea-lotrului.html"><div class="dropdown-option">Valea Lotrului</div></a>
+                                <a href="haiduci-paduri.html"><div class="dropdown-option">Haiduci si Paduri</div></a>
+                                <a href="siguranta.html"><div class="dropdown-option">Informatii pentru siguranta dvs.</div></a>
+                            </div>
+                            </filler>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <a href="contact.html"><p class="dropbtn mb-3 text-size-20">CONTACT/REZERVARE</p></a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav id="mobile-navbar">
+                    <div class="h-100 w-100 text-center">
+                        <img class="h-50 w-50 mt-4 picture-white" id="hamburger" src="..\pics\hamburger.png">
+                    </div>
+                </nav>
+            </div>
+            <div id="mobile-navbar-dropdown" class="slideup text-special">
+                <ul class="m-0 p-0" style="list-style: none;">
+                    <li class="position-relative h-100 text-special">
+                        <a href="..\index.html" class="h-100"><p class="pl-4 py-0 m-0 text-size-20 text-special">ACASA</p></a>
+                    </li>
+                    <li class="position-relative h-100 text-special">
+                        <filler class="h-100 d-flex justify-content-between">
+                        <p class="pl-4 py-0 m-0 text-size-20">DESPRE PENSIUNE</p>
+                        <img id="arrow-1" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="..\pics\up.png">
+                        </filler>
+                    </li>
+                    <div id="arrow-dropdown-1" class="slideup pl-5">
+                        <a href="unde-suntem.html"><div class="text-special">Unde suntem?</div></a>
+                        <a href="ce-va-oferim.html"><div class="text-special">Ce va oferim?</div></a>
+                        <a href="programul-pensiunii.html"><div class="text-special">Programul pensiunii</div></a>
+                    </div>
+                    <li class="position-relative h-100 text-special">   
+                        <filler class="h-100 w-100 d-flex justify-content-between">
+                        <p class="pl-4 py-0 m-0 text-size-20 w-90">TARIFE SI SERVICII</p>
+                        <img id="arrow-2" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="..\pics\up.png">
+                        </filler>
+                    </li>
+                    <div id="arrow-dropdown-2" class="slideup pl-5">
+                        <a href="tarife.html"><div class="dropdown-option text-special">Tarife</div></a>
+                        <a href="mancare-bautura.html"><div class="dropdown-option text-special">Mancare si bautura</div></a>
+                        <a href="rezervari-plata.html"><div class="dropdown-option text-special">Rezervari si Plata</div></a>
+                        <a href="termeni-conditii.html"><div class="dropdown-option text-special">Termeni si conditii</div></a>
+                    </div>
+                    <li class="position-relative h-100 text-special">
+                        <a href="galerie.html" class="h-100"><p class="pl-4 py-0 m-0 text-size-20 text-special">GALERIE FOTO</p></a>
+                    </li>
+                    <li class="position-relative h-100 text-special">
+                        <filler class="h-100 d-flex justify-content-between">
+                        <p class="pl-4 py-0 m-0 text-size-20">INFORMATII UTILE</p>
+                        <img id="arrow-3" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="..\pics\up.png">
+                        </filler>
+                    </li>
+                    <div id="arrow-dropdown-3" class="slideup pl-5">
+                        <a href="ce-facem.html"><div class="dropdown-option text-special">Ce poti face la noi</div></a>
+                        <a href="valea-lotrului.html"><div class="dropdown-option text-special">Valea Lotrului</div></a>
+                        <a href="haiduci-paduri.html"><div class="dropdown-option text-special">Haiduci si Paduri</div></a>
+                        <a href="siguranta.html"><div class="dropdown-option text-special">Informatii pentru siguranta dvs.</div></a>
+                    </div>
+                    <li class="position-relative h-100 text-special">
+                        <a href="contact.html"><p class="pl-4 py-0 m-0 mb-3 text-size-20 text-special">CONTACT/REZERVARE</p></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <section class="h-80 w-100">
+            <div class="container-fluid h-100 w-100">
+                <div class="container-fluid box-color w-60 justify-content-center text-special mt-5">
+                    <h1>Termeni si conditii</h1>
+                    
+                    <p class="m-1"><w>____</w><w>____</w>Daca doriti sa aveti un sejur placut la pensiunea noastra, este indicat sa respectati regulamentul de ordine interioara a pensiunii. Va avertizam ca nu ezitam sa aplicam santiuni
+                    daca regulamentul este incalcat. </p>
+
+                    <h2 class="m-4">Pandemia COVID-19</h2>
+                    
+                    <p class="m-1"><w>____</w><w>____</w>Vaccinul este obligatoriu. La fiecare cazare o sa vi se ceara dovada faptului ca sunteti vaccinati (o poza pe telefon cu certificatul dvs va fi de ajuns).
+                    Nu avem incotro. Pensiunea este un loc aglomerat, daca cineva se imbolnaveste de COVID, toti locatarii pensiunii sunt pusi in pericol, mai ales cei nevaccinati. Plus ca patronul
+                    afacerii este in mod deosebit expus la virus, asa ca va rugam frumos! </p>
+                    
+                    <p class="m-1"><w>____</w><w>____</w>Iata alte reguli obligatorii pentru a va proteja de virus:
+                                            <ol>
+                                                <li>Purtati masca de protectie cand sunteti in spatii publice (daca nu aveti, va dam noi).</li>
+                                                <li>Distantrea sociala in spatii publice este obligatorie.</li>
+                                                <li>Dezinfectati-va mainile ori de cate ori intrati in pensiune. Aveti servetele si gel dezinfectant pus special acolo.</li>
+                                                <li>Aerisiti camerele macar o data pe zi.</li>
+                                            </ol> </p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Pentru mai multe informatii, va rugam sa vizitati site-ul oficial pentru
+                    mai multe informatii despre pandemie <a href="https://vaccination-info.eu/ro/covid-19/informatii-covid-19">aici</a>.</p>
+
+                    <h2 class="m-4">General</h2>
+
+                    <p class="m-1"><w>____</w><w>____</w>Respectati normele minime de convietuire in spatii comune: nu alergati pe scari sau prin pensiune, nu faceti galagie, nu
+                    trantiti usile s.a.m.d. – lucrurile obisnuite.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Gunoaiele trebuie neaparat aruncate la cosul de gunoi, in nici un caz lasate in curte sau aruncate in prapastile de langa pensiune. </p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Clientii sunt rugati sa pastreze un minim de curatenie dupa ei. Nu cerem nimic pretentios, doar o ordine "de ochii soacrei".</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Pensiunea are locuri si camere care sunt folosite numai de personal - centrala, magazii, scara de serviciu, etc. Accesul turisilor in acele locuri este interzis.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Atentie cu muzica data tare - mai ales noaptea! Din cauza reliefului sunetul se propaga usor si vecinii nu vor ezita sa sune politia daca vor fi deranjati.</p>
+                    
+                    <p class="m-1"><w>____</w><w>____</w><b>Clientii nu au voie sa vina insotiti de animale de companie.</b> Pensiunea nu este un log sigur pentru animalele voastre, exista multi caini vagabonzi prin zona
+                        si pe strada din fata noastra circula multe masini cu viteza mare. </p>
+                    
+                    <h2 class="m-4">Copiii</h2>
+                    
+                    <p class="m-1"><w>____</w><w>____</w>Din experienta avuta pana acum, s-a dovedit ca unele zone ale pensiunii sunt riscante pentru copii.</p>
+                    
+                    <p class="m-1"><w>____</w><w>____</w>Proprietatea este inconjurata pe trei parti de rape adanci si abrupte (inspre lac, cca 40 metri diferenta de nivel!),
+                    iar gardul nostru nu constituie o bariera serioasa pentru un copil care doreste sa se joace. Iar a patra latura a
+                    proprietatii este la drumul national, pe unde circula masini.</p>
+                    
+                    <p class="m-1"><w>____</w><w>____</w>De aceea, daca aveti copii sub 14 ani, este mai bine sa luati in considerare un hotel sau o pensiune cu un grad mai
+                    mare de siguranta. Ne pare rau pentru aceasta atentionare, dar nu avem ce face.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Daca decideti sa veniti cu copii mici: ei vor fi supravegheaţi de însoţitori (părinţi, bunici sau bone) – CITITI SECTIUNEA 6 „Informatii pt. Siguranta”, este foarte important!
+                    De asemenea, eventualele pagube create datorită nesupravegherii copiilor vor trebui suportate de către însoţitori.</p>
+                    
+                    <p class="m-1"><w>____</w><w>____</w>Raspunderea in privinta copiilor va apartine in intregime!</p>
+                    
+                    <h2 class="m-4">Fumatul si Vapatul</h2>
+                    
+                    <p class="m-1"><w>____</w><w>____</w>Fumatul este absolut interzis in incinta pensiunii, mai ales in camere sau in bai, si nu von ezita sa aplicam sanctiuni dure pentru aceasta abatere.</p>
+                    
+                    <p class="m-1"><w>____</w><w>____</w>Locurile de fumat sunt stabilite pe balcoanele camerelor, terasă şi foişor, care sunt dotate cu scrumiere. Scrumierele sunt si ele pentru spatii exterioare. Daca nu aveti, cereti
+                    si o sa va dam.</p>
+                    
+                    <p class="m-1"><w>____</w><w>____</w>Legea antifumat nu lasa loc de interpretari: nu vom ezita sa chemam autoritatile.</p>
+                    
+                    <h2 class="m-4">Camerele</h2>
+                    
+                    <p class="m-1"><w>____</w><w>____</w>Este interzis sa luati masa in camera, din nenumarate motive. Daca aveti mancare in traista, puteti sa o mancati in sala de mese. De asemenea, toate camerle vin cu minifrigider 
+                    unde va puteti depozita macarea pe care o aveti. </p>
+                    
+                    <p class="m-1"><w>____</w><w>____</w>In caz ca aveti niste snacks-uri sau doriti sa luati un desert sus, nu e nici o problema. Regula se refera mai mult la feluri principale de mancare. Insa, daca ati luat desertul 
+                    sus, ar fi de bun augur sa returnati farfuria la bucatarie. </p>
+
+                    <h2 class="m-4">Personalul</h2>
+                    
+                    <p class="m-1"><w>____</w><w>____</w>Proprietarii pensiunii, precum si personalul de serviciu sint implicati in toate activitatile legate de servirea dvs. si
+                    fac tot ce pot ca sa va simtiti bine. Acordati-le respectul cuvenit si solicitati-le ajutorul ori de cite ori aveti nevoie.</p>
+                    <p class="m-1"><w>____</w><w>____</w>Nu va adresati nepoliticos. Ne rezervam dreptul de a lua masuri (mergand pina la evacuare) in cazul persoanelor cu
+                    comportament abuziv.</p>
+
+                    <h2 class="m-4">Supraveghere video</h2>
+                    
+                    <p class="m-1"><w>____</w><w>____</w>Pentru protectia impotriva raufacatorilor, pensiunea este supravegheata cu camere video. Acestea acopera curtea
+                    pensiunii, parcarea, precum si unele spatii comune, cum ar fi barul sau sala de jocuri.</p>
+                    <p class="m-1"><w>____</w><w>____</w>Pentru a va asigura intimitatea, locurile unde dvs. va petreceti timpul liber (restaurant, foisoare, camere etc.) <b>nu</b>
+                    sint acoperite de camere video.</p>
+                    <br><br><br>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <script>
+                $(document).ready(() => {
+                    $(".dropdown").on("mouseenter", event => {
+                        $(event.currentTarget.children[0].children[0]).addClass("highlight-cat");
+                        $(event.currentTarget.children[0].children[1]).removeClass("slideup");
+                        $(event.currentTarget.children[0].children[1]).addClass("slidedown");
+                    }).on("mouseleave", event => {
+                        $(event.currentTarget.children[0].children[0]).removeClass("highlight-cat");
+                        $(event.currentTarget.children[0].children[1]).removeClass("slidedown");
+                        $(event.currentTarget.children[0].children[1]).addClass("slideup");
+                    })
+                    $(".dropdown-option").on("mouseenter", event => {
+                        $(event.currentTarget).addClass("highlight-subcat");
+                    }).on("mouseleave", event => {
+                        $(event.currentTarget).removeClass("highlight-subcat");
+                    })
+                })
+            </script>
+        </footer>
+    </div>
+</body>
+
+</html>

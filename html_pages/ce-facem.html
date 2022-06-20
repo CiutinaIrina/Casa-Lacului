@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Casa Lacului</title>
+    <link rel="icon" href="..\pics\favicon.png">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripty.js"></script>
+</head>
+    
+<body class="container-fluid m-0 p-0 w-100">
+    <div id="site" class="container-fluid m-0 p-0 w-100" style="background-image: url('../pics/background11.jpg')">
+        <header class="h-10">
+            <div class="container-fluid d-flex h-100 w-100">
+                <div id="logo"class="align-self-center">
+                    <a href="..\index.html"><img src="..\pics\logo3.png"></a>
+                </div>
+                <nav id="pc-navbar" class="w-75 text-nowrap">
+                    <ul class="float-right h-100 d-flex" style="list-style: none;">
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <a href="..\index.html" class="h-100"><p class="dropbtn text-size-20">ACASA</p></a>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <filler class="h-100">
+                            <p class="dropbtn text-size-20">DESPRE PENSIUNE</p>
+                            <div class="slideup dropdown-content pa">
+                                <a href="unde-suntem.html"><div class="dropdown-option">Unde suntem?</div></a>
+                                <a href="ce-va-oferim.html"><div class="dropdown-option">Ce va oferim?</div></a>
+                                <a href="programul-pensiunii.html"><div class="dropdown-option">Programul pensiunii</div></a>
+                            </div>
+                            </filler>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">   
+                            <filler>
+                            <p class="dropbtn text-size-20">TARIFE SI SERVICII</p>
+                            <div class="slideup dropdown-content pa">
+                                <a href="tarife.html"><div class="dropdown-option">Tarife</div></a>
+                                <a href="mancare-bautura.html"><div class="dropdown-option">Mancare si bautura</div></a>
+                                <a href="rezervari-plata.html"><div class="dropdown-option">Rezervari si Plata</div></a>
+                                <a href="termeni-conditii.html"><div class="dropdown-option">Termeni si conditii</div></a>
+                            </div>
+                            </filler>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <a href="galerie.html" class="h-100"><p class="dropbtn mb-3 text-size-20">GALERIE FOTO</p></a>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <filler>
+                            <p class="dropbtn text-size-20">INFORMATII UTILE</p>
+                            <div class="slideup dropdown-content pa">
+                                <a href="ce-facem.html"><div class="dropdown-option">Ce poti face la noi</div></a>
+                                <a href="valea-lotrului.html"><div class="dropdown-option">Valea Lotrului</div></a>
+                                <a href="haiduci-paduri.html"><div class="dropdown-option">Haiduci si Paduri</div></a>
+                                <a href="siguranta.html"><div class="dropdown-option">Informatii pentru siguranta dvs.</div></a>
+                            </div>
+                            </filler>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <a href="contact.html"><p class="dropbtn mb-3 text-size-20">CONTACT/REZERVARE</p></a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav id="mobile-navbar">
+                    <div class="h-100 w-100 text-center">
+                        <img class="h-50 w-50 mt-4 picture-white" id="hamburger" src="..\pics\hamburger.png">
+                    </div>
+                </nav>
+            </div>
+            <div id="mobile-navbar-dropdown" class="slideup text-special">
+                <ul class="m-0 p-0" style="list-style: none;">
+                    <li class="position-relative h-100 text-special">
+                        <a href="..\index.html" class="h-100"><p class="pl-4 py-0 m-0 text-size-20 text-special">ACASA</p></a>
+                    </li>
+                    <li class="position-relative h-100 text-special">
+                        <filler class="h-100 d-flex justify-content-between">
+                        <p class="pl-4 py-0 m-0 text-size-20">DESPRE PENSIUNE</p>
+                        <img id="arrow-1" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="..\pics\up.png">
+                        </filler>
+                    </li>
+                    <div id="arrow-dropdown-1" class="slideup pl-5">
+                        <a href="unde-suntem.html"><div class="text-special">Unde suntem?</div></a>
+                        <a href="ce-va-oferim.html"><div class="text-special">Ce va oferim?</div></a>
+                        <a href="programul-pensiunii.html"><div class="text-special">Programul pensiunii</div></a>
+                    </div>
+                    <li class="position-relative h-100 text-special">   
+                        <filler class="h-100 w-100 d-flex justify-content-between">
+                        <p class="pl-4 py-0 m-0 text-size-20 w-90">TARIFE SI SERVICII</p>
+                        <img id="arrow-2" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="..\pics\up.png">
+                        </filler>
+                    </li>
+                    <div id="arrow-dropdown-2" class="slideup pl-5">
+                        <a href="tarife.html"><div class="dropdown-option text-special">Tarife</div></a>
+                        <a href="mancare-bautura.html"><div class="dropdown-option text-special">Mancare si bautura</div></a>
+                        <a href="rezervari-plata.html"><div class="dropdown-option text-special">Rezervari si Plata</div></a>
+                        <a href="termeni-conditii.html"><div class="dropdown-option text-special">Termeni si conditii</div></a>
+                    </div>
+                    <li class="position-relative h-100 text-special">
+                        <a href="galerie.html" class="h-100"><p class="pl-4 py-0 m-0 text-size-20 text-special">GALERIE FOTO</p></a>
+                    </li>
+                    <li class="position-relative h-100 text-special">
+                        <filler class="h-100 d-flex justify-content-between">
+                        <p class="pl-4 py-0 m-0 text-size-20">INFORMATII UTILE</p>
+                        <img id="arrow-3" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="..\pics\up.png">
+                        </filler>
+                    </li>
+                    <div id="arrow-dropdown-3" class="slideup pl-5">
+                        <a href="ce-facem.html"><div class="dropdown-option text-special">Ce poti face la noi</div></a>
+                        <a href="valea-lotrului.html"><div class="dropdown-option text-special">Valea Lotrului</div></a>
+                        <a href="haiduci-paduri.html"><div class="dropdown-option text-special">Haiduci si Paduri</div></a>
+                        <a href="siguranta.html"><div class="dropdown-option text-special">Informatii pentru siguranta dvs.</div></a>
+                    </div>
+                    <li class="position-relative h-100 text-special">
+                        <a href="contact.html"><p class="pl-4 py-0 m-0 mb-3 text-size-20 text-special">CONTACT/REZERVARE</p></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <section class="h-80 w-100">
+            <div class="container-fluid h-100 w-100">
+                <div class="container-fluid box-color w-65 justify-content-center text-special mt-5">
+                    <h1>Ce puteti face la noi</h1>
+
+                    <h3 class="m-4">In Perimetrul Pensiunii</h3>
+
+                    <p class="m-1"><w>____</w><w>____</w>Casa Lacului va sta la dispozitie cu o gama variata de activitati exterioare si interioare. Daca ati venit pentru un sejur mai relaxant sau ati nimerit o zi ploioasa, pensiunea
+                        noastra va ofera diverisment.
+                    </p>
+
+                    <h2 class="m-4">Sala de jocuri</h2>
+                    <p class="m-1"><w>____</w><w>____</w>Pensiunea dispune de o sala de jocuri de care puteti dispune contra cost. Avem biliard, tenis de masa, air hockey, fotbal de masa si darts-uri. De asemena, dispuneti di de o 
+                        tablita pe care o puteti folosi sa va urmariti scorul. Daca doriti sa inchiriati un aparat, veniti la receptie sa cereti lucrurile necesare (palete, mingi) de care aveti nevoie.
+                    </p>
+                    <p class="m-1"><w>____</w><w>____</w>Va rugam frumos sa <warning>nu lasati copii nesupravegheati in sala de jocuri</warning>! Nu vom ezita sa incuiem sala daca va abateti de la aceasta regula.</p>
+
+                    <h2 class="m-4">Inauntru</h2>
+
+                    <p class="m-1"><w>____</w><w>____</w>In livingul nostru o sa puteti gasi multe jocuri de societate pentru o distractie pe cinste intre prieteni. Avem gama clasica precum monopoly, poker, remi, scrabble, sah si pachete
+                        de carti precum si jocuri mai moderne cum ar fii Taboo, Carcasonne si Tic-Tac-Buuum. Cereti si o sa va dam! 
+                    </p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Sala de masa este spatioasa si poate fi folosita si pe post de ring de dans. Televizorul din sala se poate conecta la internet pentru o seara de karaoke pe cinste! Observatia ce se
+                        poate face: numai cu acordul nostru! Aceste activitati pot deranja ceilalti turisti, asa ca daca veni cu chef de bairam, mai bine e daca aveti toata pensiunea inchiriata.
+                    </p>
+
+                    <h2 class="m-4">In curte</h2>
+
+                    <p class="m-1"><w>____</w><w>____</w>Curtea este mare, frumoasa si dispune de multe locuri de odihna unde puteti face conversatie cu prietenii dumneavoastra.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Daca aveti chef de un pic de miscare, bicicletle noastre abia asteapta sa fie scoase la o plimbare! Vorbiti cu noi la receptie si o sa va trimitem catre biciclete, faceti o 
+                        mica inspectie sa fie totul ok si puteti sa va plimbati pe strada. Atentie totusi la masini si la pod.
+                    </p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Noi dispunem si de un mini-echipament de badminton pe care il puteti instala usor in curte.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Trambulina noastra este disponibila tutror turistilor, numai ca poate suporta maxim 110kg.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Curtea noastra are un loc amenajat special pentru focuri de tabara, numai ca un foc de tabara se poate numai cu acordul nostru. Noi o sa va ajutam cu materiale, dar dupa ce
+                        terminati sa veniti sa ne spuneti ca sa il putem stinge.
+                    </p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Nu in ultimul rand, avem gratar. Daca ati vorbit cu patronii sa inchiriati gratarul, el va sta la dispozitie. </p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Pescarii amatori sunt bineveniti la noi, desi nu mai dispunem de unelte de pescuit. Daca doriti sa pescuiti va recomandam drumul la lac dinspre Brezoi (explicat mai jos).
+                    </p>
+
+                    <h3 class="m-4">In afara pensiunii</h3>
+
+                    <p class="m-1"><w>____</w><w>____</w>Daca aveti chef de o plimbare scurta, avem doua destinatii pentru dumneavoastra. Primul este drumul catre lac. O luati in stanga cum iesiti (inspre Brezoi) si mergeti pana 
+                        vedeti un drum de masina ducand in jos (sub hotelul neterminat). Acolo puteti admira lacul Bradisor, privelistea, relieful si piesa de rezistenta, gunoaiele! Lacul este unul 
+                        de acumulare, deci daca il vizitati in timpuri diferite, va avea alt nivel.
+                    </p>
+                    <p class="m-1"><w>____</w><w>____</w>A doua destinatie este fix vis-a-vis de lac, ci anume o cascada mica. Cand ajungeti langa intrarea la lac, o sa vedeti pe partea celalata a strazii un drum care duce sus
+                        pe deal blocat de o poarta. Daca treceti peste poarta (nu e nici o problema, am vorbit cu propietarul), o sa mai uracti putin pana se va despartii drumul. Poteca mai joasa
+                        duce la o priveliste deosebita a cascadei (perfect pentru Instagram!) iar cea de sus duce la varful cascadei. Apa din varf poate fi trecuta pentru a continua drumetia; daca 
+                        o continuati, veti putea privi pensiuinea de la altitudine. Drumul se va termina in strada dinspre Voineasa, o luati dreapta si in 10 min ajungeti la noi.
+                    </p>
+                    <p class="m-1"><w>____</w><w>____</w>Pentru drumetii mai serioase, va recomandam Cascada Scorus! Porniti cu masina in dreapta pensiunii inspre Voineasa pana ajungeti la hidrocentrala. Acolo faceti stanga, treceti 
+                        de Terasa Casutei din Padure pana ajungeti la o fabrica de cherestrea, unde va trebui sa lasati masinile. Mergeti in directia traseului si cam in 40min veti ajunge.
+                    </p>
+                    <p class="m-1"><w>____</w><w>____</w>Pe timp de iarna partia de ski Transalpina se deschide. Drumul este de cel putin 0 ora, porniti in dreapta cum iesiti din pensiune (inspre Voineasa) si o tineti asa in fata pana
+                        ajungeti. Va averizam ca partia se aglomereaza <b>foarte</b> repede si cel mai bine e sa plecati de la ora 7:00.
+                    </p>
+                    <p class="m-1"><w>____</w><w>____</w>Daca aveti chef de balaceala, lacul nostru nu este un candidat bun, mai ales iarna. In schimb, statiunile din Calimanesti va stau la dispozitie pe toata durata anului. 
+                        Acolo au piscine cu apa termala interior si exterior. Ca sa ajungeti la ele, faceti stange inspre Brezoi pana cand pana la intersectia inspre E81. Acolo faceti dreapta pana
+                        ajungeti la statiune, nu e grea de vazut. 
+                    </p>
+                    <p class="m-1"><w>____</w><w>____</w>Pastrand cel mai bun pentru ultimul, comuna Brezoi gazduieste anual, vara, festivaluri de blues la aer liber. Multi artisti renumiti de blues isi fac aparitia la festival, 
+                        cea mai vestita fiind, of course, regina blues-ului Beth Hart. Festivalurile au o atmosfera exceptionala, acolo este lume buna, 
+                        aveti conditii foarte bune, mancare, mese, toalete, tot ce va trebuie. 
+                    </p>
+                    <br><br><br>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <script>
+                $(document).ready(() => {
+                    $(".dropdown").on("mouseenter", event => {
+                        $(event.currentTarget.children[0].children[0]).addClass("highlight-cat");
+                        $(event.currentTarget.children[0].children[1]).removeClass("slideup");
+                        $(event.currentTarget.children[0].children[1]).addClass("slidedown");
+                    }).on("mouseleave", event => {
+                        $(event.currentTarget.children[0].children[0]).removeClass("highlight-cat");
+                        $(event.currentTarget.children[0].children[1]).removeClass("slidedown");
+                        $(event.currentTarget.children[0].children[1]).addClass("slideup");
+                    })
+                    $(".dropdown-option").on("mouseenter", event => {
+                        $(event.currentTarget).addClass("highlight-subcat");
+                    }).on("mouseleave", event => {
+                        $(event.currentTarget).removeClass("highlight-subcat");
+                    })
+                })
+            </script>
+        </footer>
+    </div>
+</body>
+
+</html>

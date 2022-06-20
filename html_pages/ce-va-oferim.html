@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Casa Lacului</title>
+    <link rel="icon" href="..\pics\favicon.png">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripty.js"></script>
+</head>
+    
+<body class="container-fluid m-0 p-0 w-100">
+    <div id="site" class="container-fluid m-0 p-0 w-100" style="background-image: url('../pics/background10.jpg')">
+        <header class="h-10">
+            <div class="container-fluid d-flex h-100 w-100">
+                <div id="logo"class="align-self-center">
+                    <a href="..\index.html"><img src="..\pics\logo3.png"></a>
+                </div>
+                <nav id="pc-navbar" class="w-75 text-nowrap">
+                    <ul class="float-right h-100 d-flex" style="list-style: none;">
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <a href="..\index.html" class="h-100"><p class="dropbtn text-size-20">ACASA</p></a>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <filler class="h-100">
+                            <p class="dropbtn text-size-20">DESPRE PENSIUNE</p>
+                            <div class="slideup dropdown-content pa">
+                                <a href="unde-suntem.html"><div class="dropdown-option">Unde suntem?</div></a>
+                                <a href="ce-va-oferim.html"><div class="dropdown-option">Ce va oferim?</div></a>
+                                <a href="programul-pensiunii.html"><div class="dropdown-option">Programul pensiunii</div></a>
+                            </div>
+                            </filler>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">   
+                            <filler>
+                            <p class="dropbtn text-size-20">TARIFE SI SERVICII</p>
+                            <div class="slideup dropdown-content pa">
+                                <a href="tarife.html"><div class="dropdown-option">Tarife</div></a>
+                                <a href="mancare-bautura.html"><div class="dropdown-option">Mancare si bautura</div></a>
+                                <a href="rezervari-plata.html"><div class="dropdown-option">Rezervari si Plata</div></a>
+                                <a href="termeni-conditii.html"><div class="dropdown-option">Termeni si conditii</div></a>
+                            </div>
+                            </filler>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <a href="galerie.html" class="h-100"><p class="dropbtn mb-3 text-size-20">GALERIE FOTO</p></a>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <filler>
+                            <p class="dropbtn text-size-20">INFORMATII UTILE</p>
+                            <div class="slideup dropdown-content pa">
+                                <a href="ce-facem.html"><div class="dropdown-option">Ce poti face la noi</div></a>
+                                <a href="valea-lotrului.html"><div class="dropdown-option">Valea Lotrului</div></a>
+                                <a href="haiduci-panduri.html"><div class="dropdown-option">Haiduci si Paduri</div></a>
+                                <a href="siguranta.html"><div class="dropdown-option">Informatii pentru siguranta dvs.</div></a>
+                            </div>
+                            </filler>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <a href="contact.html"><p class="dropbtn mb-3 text-size-20">CONTACT/REZERVARE</p></a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav id="mobile-navbar">
+                    <div class="h-100 w-100 text-center">
+                        <img class="h-50 w-50 mt-4 picture-white" id="hamburger" src="..\pics\hamburger.png">
+                    </div>
+                </nav>
+            </div>
+            <div id="mobile-navbar-dropdown" class="slideup text-special">
+                <ul class="m-0 p-0" style="list-style: none;">
+                    <li class="position-relative h-100 text-special">
+                        <a href="..\index.html" class="h-100"><p class="pl-4 py-0 m-0 text-size-20 text-special">ACASA</p></a>
+                    </li>
+                    <li class="position-relative h-100 text-special">
+                        <filler class="h-100 d-flex justify-content-between">
+                        <p class="pl-4 py-0 m-0 text-size-20">DESPRE PENSIUNE</p>
+                        <img id="arrow-1" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="..\pics\up.png">
+                        </filler>
+                    </li>
+                    <div id="arrow-dropdown-1" class="slideup pl-5">
+                        <a href="unde-suntem.html"><div class="text-special">Unde suntem?</div></a>
+                        <a href="ce-va-oferim.html"><div class="text-special">Ce va oferim?</div></a>
+                        <a href="programul-pensiunii.html"><div class="text-special">Programul pensiunii</div></a>
+                    </div>
+                    <li class="position-relative h-100 text-special">   
+                        <filler class="h-100 w-100 d-flex justify-content-between">
+                        <p class="pl-4 py-0 m-0 text-size-20 w-90">TARIFE SI SERVICII</p>
+                        <img id="arrow-2" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="..\pics\up.png">
+                        </filler>
+                    </li>
+                    <div id="arrow-dropdown-2" class="slideup pl-5">
+                        <a href="tarife.html"><div class="dropdown-option text-special">Tarife</div></a>
+                        <a href="mancare-bautura.html"><div class="dropdown-option text-special">Mancare si bautura</div></a>
+                        <a href="rezervari-plata.html"><div class="dropdown-option text-special">Rezervari si Plata</div></a>
+                        <a href="termeni-conditii.html"><div class="dropdown-option text-special">Termeni si conditii</div></a>
+                    </div>
+                    <li class="position-relative h-100 text-special">
+                        <a href="galerie.html" class="h-100"><p class="pl-4 py-0 m-0 text-size-20 text-special">GALERIE FOTO</p></a>
+                    </li>
+                    <li class="position-relative h-100 text-special">
+                        <filler class="h-100 d-flex justify-content-between">
+                        <p class="pl-4 py-0 m-0 text-size-20">INFORMATII UTILE</p>
+                        <img id="arrow-3" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="..\pics\up.png">
+                        </filler>
+                    </li>
+                    <div id="arrow-dropdown-3" class="slideup pl-5">
+                        <a href="ce-facem.html"><div class="dropdown-option text-special">Ce poti face la noi</div></a>
+                        <a href="valea-lotrului.html"><div class="dropdown-option text-special">Valea Lotrului</div></a>
+                        <a href="haiduci-paduri.html"><div class="dropdown-option text-special">Haiduci si Paduri</div></a>
+                        <a href="siguranta.html"><div class="dropdown-option text-special">Informatii pentru siguranta dvs.</div></a>
+                    </div>
+                    <li class="position-relative h-100 text-special">
+                        <a href="contact.html"><p class="pl-4 py-0 m-0 mb-3 text-size-20 text-special">CONTACT/REZERVARE</p></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <section class="h-80 w-100">
+            <div class="container-fluid h-auto w-100 p-0 text-special">
+                <div id="foto" class="w-100" style="height: 40rem">
+                    <div id="" class="object-fit-cover h-100 w-100">
+                        <div class="active-slide object-fit-cover h-100 w-100 bg-light" id="pic1">
+                            <img class="object-fit-cover h-100 w-100 position-relative fade" src="..\pics\slide1.jpg">
+                            <figcaption class="d-flex justify-content-between">
+                                <div class="d-flex picture-white button-left">
+                                    <img src="..\pics\l.png" class="i-5 picture-white" onclick="">
+                                    <img src="..\pics\l.png" class="i-5 picture-white" onclick="">
+                                    <img src="..\pics\l.png" class="i-5 picture-white" onclick="">
+                                    <img src="..\pics\l.png" class="i-5 picture-white" onclick="">
+                                </div>
+                                <p>Casa Lacului ofera pentru cazare 12 camere: 8 duble si 4 triple, toate cu baie individuala, frigider si TV satelit.</p>
+                                <div class="d-flex picture-white button-right">
+                                    <img src="..\pics\r.png" class="i-5 picture-white" onclick="">
+                                    <img src="..\pics\r.png" class="i-5 picture-white" onclick="">
+                                    <img src="..\pics\r.png" class="i-5 picture-white" onclick="">
+                                    <img src="..\pics\r.png" class="i-5 picture-white" onclick="">
+                                </div>
+                            </figcaption>
+                        </div>
+                        <div class="hidden-slide object-fit-cover h-100 w-100 bg-light" id="pic2">
+                            <img class="object-fit-cover h-100 w-100 position-relative fade" src="..\pics\slide2.jpg">
+                            <figcaption class="d-flex justify-content-between">
+                                <div class="d-flex picture-white button-left">
+                                    <img src="..\pics\l.png" class="i-5 picture-white" onclick="">
+                                    <img src="..\pics\l.png" class="i-5 picture-white" onclick="">
+                                    <img src="..\pics\l.png" class="i-5 picture-white" onclick="">
+                                    <img src="..\pics\l.png" class="i-5 picture-white" onclick="">
+                                </div>
+                                <p>Dorinta noastra este sa oferim o cazare la un nivel mai bun decat al unei pensiuni montane obisnuite.</p>
+                                <div class="d-flex picture-white button-right">
+                                    <img src="..\pics\r.png" class="i-5 picture-white" onclick="">
+                                    <img src="..\pics\r.png" class="i-5 picture-white" onclick="">
+                                    <img src="..\pics\r.png" class="i-5 picture-white" onclick="">
+                                    <img src="..\pics\r.png" class="i-5 picture-white" onclick="">
+                                </div>
+                            </figcaption>
+                        </div>
+                        <div class="hidden-slide object-fit-cover h-100 w-100 bg-light" id="pic3">
+                            <img class="object-fit-cover h-100 w-100 position-relative fade" src="..\pics\slide3.jpg">
+                            <figcaption class="d-flex justify-content-between">
+                                <div class="d-flex picture-white button-left">
+                                    <img src="..\pics\l.png" class="i-5 picture-white" onclick="">
+                                    <img src="..\pics\l.png" class="i-5 picture-white" onclick="">
+                                    <img src="..\pics\l.png" class="i-5 picture-white" onclick="">
+                                    <img src="..\pics\l.png" class="i-5 picture-white" onclick="">
+                                </div>
+                                <p>Arhitectura pensiunii prevede spatii comune largi si confortabile, la fiecare etaj, unde puteti sa stati seara cu prietenii.</p>
+                                <div class="d-flex picture-white button-right">
+                                    <img src="..\pics\r.png" class="i-5 picture-white" onclick="">
+                                    <img src="..\pics\r.png" class="i-5 picture-white" onclick="">
+                                    <img src="..\pics\r.png" class="i-5 picture-white" onclick="">
+                                    <img src="..\pics\r.png" class="i-5 picture-white" onclick="">
+                                </div>
+                            </figcaption>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid box-color w-75 mt-5">
+                    <h1 class="">Acomodari</h1>
+                </div>
+                <div id="camere" class="container-fluid w-75 p-0 mt-5">
+                    <div id="camera-dubla" class="d-flex box-color mb-5">
+                        <div class="w-55">
+                            <img class="feature-image m-4" src="../pics/interior2.jpg">
+                        </div>
+                        <div class="w-45 m-3">
+                            <div>
+                                <h1 class="">Camera Dubla</h1>
+                            </div>
+                            <div>
+                                <p class="">Camera dubla va ofera o cazare calduroasa si o atmosfera primitoare.<br><br>
+                                                  Camerele duble de la etajul 1 au toate balcon, iar cele de la etajul 2 au aer conditionat. <br><br>
+                                                  La cerere, va putem oferi pat suplimentar contra cost.<br></p>
+                            </div>
+                            <div class="m-3">
+                                <div class="d-flex"><div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png"><p class="tilting">Baie en-suite</p></div>
+                                <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png"><p>Uscator</p></div>
+                                <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png"><p>Balcon (Etaj 1)</p></div>
+                                <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png"><p>Aer Conditionat (Etaj 2)</p></div></div>
+                                <div class="d-flex"><div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png"><p>Minifrigider</p></div>
+                                <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png"><p>Wi-Fi</p></div>
+                                <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png"><p>Televizor</p></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="camera-tripla" class="d-flex box-color mt-5">
+                        <div class="w-55">
+                            <img class="feature-image m-4" src="../pics/interior2.jpg">
+                        </div>
+                        <div class="w-45 m-3">
+                            <div>
+                                <h1 class="">Camera Tripla</h1>
+                            </div>
+                            <div>
+                                <p class="">Camera tripla va ofera spatiu si comfort la un pret rezonabil.<br><br>
+                                    Toate camerele triple sunt situate la mansarda si dispun de aer conititonat. <br><br>
+                                    Paturile suplimentare nu sunt disponibile pentru camere triple.<br></p>
+                            </div>
+                            <div class="m-3">
+                                <div class="d-flex">
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p class="">Baie en-suite</p>
+                                    </div>
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p>Uscator</p>
+                                    </div>
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p>Aer Conditionat</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p>Minifrigider</p>
+                                    </div>
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p>Wi-Fi</p>
+                                    </div>
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p>Televizor</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid box-color w-75 mt-5">
+                    <h1 class="">Facilitati</h1>
+                </div>
+                <div id="facilitati" class="container-fluid w-75 p-0">
+                    <div id="curte"  class="box-color d-flex my-5">
+                        <div class="w-55">
+                            <img class="feature-image m-4" src="../pics/background3.jpg">
+                        </div>
+                        <div class="w-45">
+                            <div>
+                                <h1 class="">Curte</h1>
+                            </div>
+                            <div>
+                                <p class="">Pensiunea beneficiaza de o curte spatioasa numai buna pentru relaxare.<br><br>
+                                    Dispunem de 4 foisoare (unul sus in copac), o trambulina, mult spatiu verde si sezlonguri. <br><br>
+                                    Avem si un loc special amenajat pentru foc de tabara.</p>
+                            </div>
+                            <div class="m-3">
+                                <div class="d-flex">
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p class="">Foisoare</p>
+                                    </div>
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p>Trambulina</p>
+                                    </div>
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p>Foc de Tabara</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p>Spatiu Verde</p>
+                                    </div>
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p>Wi-Fi</p>
+                                    </div>
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p>Spatiu de Relaxare</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sala-de-jocuri" class="box-color d-flex my-5">
+                        <div class="w-55">
+                            <img class="feature-image m-4" src="../pics/interior5.jpg">
+                        </div>
+                        <div class="w-45">
+                            <div>
+                                <h1 class="">Sala de Jocuri</h1>
+                            </div>
+                            <div>
+                                <p class="">Sala noastra de jocuri va ofera jocuri de masa clasice contra cost.<br><br>
+                                    Avem biliard, ping-pong, air hockey, fotbal de masa si darts-uri. <br><br>
+                                    De asemenea dispuneti si de o tabla de scris pentru a tine cont de scoruri. </p>
+                            </div>
+                            <div class="m-3">
+                                <div class="d-flex">
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p class="">Biliard</p>
+                                    </div>
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p>Ping Pong</p>
+                                    </div>
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p>Fotbal de Masa</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p>Darts</p>
+                                    </div>
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p>Biliard</p>
+                                    </div>
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p>Tabla</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="restaurant" class="box-color d-flex my-5">
+                        <div class="w-55">
+                            <img class="feature-image m-4" src="../pics/interior7.jpg">
+                        </div>
+                        <div class="w-45">
+                            <div>
+                                <h1 class="">Restaurant</h1>
+                            </div>
+                            <div>
+                                <p class="">Pensiunea detine o sala de mese.<br><br>
+                                    Meniul este traditional romanesc si il puteti stabili cu noi. <br><br>
+                                    Micul dejun este de tip suedez si inclus in pretul camerei.<br>
+                                </p>
+                            </div>
+                            <div class="m-3">
+                                <div class="d-flex">
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p class="">Terasa</p>
+                                    </div>
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p>Mic Dejun Suedez</p>
+                                    </div>
+                                    <div class="d-flex"><img class="mx-2 i-5" src="..\pics\viset.png">
+                                        <p>Boiler</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid box-color w-75 mt-5">
+                    <h1 class="">Mentiuni</h1>
+                </div>
+                <div id="mentiuni" class="container-fluid w-75 p-0">
+                    <div id="bucatarie" class="d-flex box-color my-4 p-0">
+                        <div class="m-4">
+                            <div>
+                                <h1 class="">Bucatarie</h1>
+                            </div>
+                            <div>
+                                <p class="m-1 mb-5">Clientii pensiunii nu au access la bucatarie. Legea nu permite accessul persoanelor strine in zonele unde se prepara
+                                    mancarea. De asemnea bucataria tinde sa fie foarte aglomerata si se prea poate sa deranjati personalul de acolo.<br><br>
+                                    Daca doriti ceva din bucatarie, cel mai bine e sa cereti ajutorul personalului. <br><br>
+                                    Pensiunea dispune de o oferta speciala care inlocuieste servirea mesei cu accessul deplin la bucatarie. Va avertizam insa, ca aceasta optiune implica un cost 
+                                    suplimentar menit sa acopere prepararea bucatariei pentru turisti plus curatarea dupa sejur.<br><br>
+                                    <b class="">Mare atentie cu copii! Bucataria poate fi foarte periculoasa.</b><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="gratar" class="d-flex box-color my-4 p-0">
+                        <div class="m-4">
+                            <div>
+                                <h1 class="">Gratar</h1>
+                            </div>
+                            <div>
+                                <p class="m-1 mb-5">Pensiunea are un gratar modern in spate unde bucatarii nostrii va prepara dumicatele cu drag.<br><br>
+                                    Daca doriti sa va pregatit singuri mancarea, puteti inchiria gratarul contra cost. Noi va asiguram toate uneltele de care aveti nevoie: 
+                                    lemne, carbune, ustensile de bucatarie etc. Costul e menit sa acopere curatarea gratarului si a ustensilelor aferente. <br><br>
+                                    Gratarul nostru e foarte aproape de padure.  <b class="warning">Mare atentie cu focul!</b><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="fumat" class="d-flex box-color my-4 p-0">
+                        <div class="m-4">
+                            <div>
+                                <h1 class="">Fumat</h1>
+                            </div>
+                            <div>
+                                <p class="m-1 mb-5">Va atentionam ca fumatul este absolut interzis in incinta pensiunii, mai ales in camere sau in bai, si nu ezitam sa aplicam sanctiuni 
+                                    dure pentru aceasta abatere.<br><br>
+                                    Fumatul este permis in orice spatiu deschis. Avem multe terase si balcoane facute special pentru fumatori. Chistoacele se arunca numai in cosurile speciale din 
+                                    aluminiu sau in scrumiere. Daca doriti scrumiera, cereti si o sa va dam. <br><br>
+                                    Va atentionam ca pensiunea este inconjurata de copaci, vegeataie si constructii din lemn. Pericolul de incendiu este mare, asa ca <b class="warning">atentie
+                                    cu chistoacele de tigara!</b><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <script>
+                $(document).ready(() => {
+                    setInterval( function(){
+                        //alert($(".active-slide").attr("id"))
+                        if($(".active-slide").attr("id") == "pic3"){
+                            $(".active-slide").removeClass("active-slide").addClass("hidden-slide").prev().prev().removeClass("hidden-slide").addClass("active-slide");
+                        }
+                        else{
+                            $(".active-slide").removeClass("active-slide").addClass("hidden-slide").next().removeClass("hidden-slide").addClass("active-slide");
+                        }
+                    }, 9000);
+
+                    
+                    $(".dropdown").on("mouseenter", event => {
+                        $(event.currentTarget.children[0].children[0]).addClass("highlight-cat");
+                        $(event.currentTarget.children[0].children[1]).removeClass("slideup");
+                        $(event.currentTarget.children[0].children[1]).addClass("slidedown");
+                    }).on("mouseleave", event => {
+                        $(event.currentTarget.children[0].children[0]).removeClass("highlight-cat");
+                        $(event.currentTarget.children[0].children[1]).removeClass("slidedown");
+                        $(event.currentTarget.children[0].children[1]).addClass("slideup");
+                    })
+                    $(".dropdown-option").on("mouseenter", event => {
+                        $(event.currentTarget).addClass("highlight-subcat");
+                    }).on("mouseleave", event => {
+                        $(event.currentTarget).removeClass("highlight-subcat");
+                    })
+                    $(".button-left").on("click", event => {
+                        let $activePicture;
+                        for(i=1;i<=3;i++){
+                            let id = "#pic" + i;
+                            const $picture = $(id);
+                            if($picture.hasClass("hidden-slide") !== true){
+                                //alert(i);
+                                $activePicture = $picture;
+                                let index = i;
+                                break;
+                            }
+                        }
+                        if(i==1){i=3}
+                        else{i--};
+                        const $prevPicture = $("#pic"+i);
+                        $activePicture.addClass("hidden-slide");                    
+                        $prevPicture.removeClass("hidden-slide");
+                    })
+                    $(".button-right").on("click", event => {
+                        let $activePicture;
+                        for (i = 1; i <= 3; i++) {
+                            let id = "#pic" + i;
+                            const $picture = $(id);
+                            if ($picture.hasClass("hidden-slide") !== true) {
+                                //alert(i);
+                                $activePicture = $picture;
+                                let index = i;
+                                break;
+                            }
+                        }
+                        if (i == 3) { i = 1 }
+                        else { i++ };
+                        const $nextPicture = $("#pic" + i);
+                        $activePicture.addClass("hidden-slide");
+                        $nextPicture.removeClass("hidden-slide");
+                    })
+                })
+            </script>
+        </footer>
+    </div>
+</body>
+
+</html>

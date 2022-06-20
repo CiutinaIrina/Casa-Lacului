@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Casa Lacului</title>
+        <link rel="icon" href="pics\favicon.png">
+        <link rel="stylesheet" href="style.css">
+        <script src="jquery-3.5.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+                integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="scripty.js"></script>
+    </head>
+    <body class="container-fluid m-0 p-0 h-100 w-100">
+        <div id="site" class="container-fluid m-0 p-0 h-100 w-100" style="background-image: url('pics/background1.jpg')">
+            <header class="h-10">
+                <div class="container-fluid d-flex h-100 w-100">
+                    <div id="logo"class="align-self-center">
+                        <a href="index.html"><img src="pics\logo3.png"></a>
+                    </div>
+                    <nav id="pc-navbar" class="w-75 text-nowrap">
+                        <ul class="float-right h-100 d-flex" style="list-style: none;">
+                            <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                                <a href="index.html" class="h-100"><p class="dropbtn text-size-20">ACASA</p></a>
+                            </li>
+                            <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                                <filler class="h-100">
+                                <p class="dropbtn text-size-20">DESPRE PENSIUNE</p>
+                                <div class="slideup dropdown-content pa">
+                                    <a href="html_pages/unde-suntem.html"><div class="dropdown-option">Unde suntem?</div></a>
+                                    <a href="html_pages/ce-va-oferim.html"><div class="dropdown-option">Ce va oferim?</div></a>
+                                    <a href="html_pages/programul-pensiunii.html"><div class="dropdown-option">Programul pensiunii</div></a>
+                                </div>
+                                </filler>
+                            </li>
+                            <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">   
+                                <filler>
+                                <p class="dropbtn text-size-20">TARIFE SI SERVICII</p>
+                                <div class="slideup dropdown-content pa">
+                                    <a href="html_pages/tarife.html"><div class="dropdown-option">Tarife</div></a>
+                                    <a href="html_pages/mancare-bautura.html"><div class="dropdown-option">Mancare si bautura</div></a>
+                                    <a href="html_pages/rezervari-plata.html"><div class="dropdown-option">Rezervari si Plata</div></a>
+                                    <a href="html_pages/termeni-conditii.html"><div class="dropdown-option">Termeni si conditii</div></a>
+                                </div>
+                                </filler>
+                            </li>
+                            <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                                <a href="html_pages/galerie.html" class="h-100"><p class="dropbtn mb-3 text-size-20">GALERIE FOTO</p></a>
+                            </li>
+                            <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                                <filler>
+                                <p class="dropbtn text-size-20">INFORMATII UTILE</p>
+                                <div class="slideup dropdown-content pa">
+                                    <a href="html_pages/ce-facem.html"><div class="dropdown-option">Ce poti face la noi</div></a>
+                                    <a href="html_pages/valea-lotrului.html"><div class="dropdown-option">Valea Lotrului</div></a>
+                                    <a href="html_pages/haiduci-paduri.html"><div class="dropdown-option">Haiduci si Paduri</div></a>
+                                    <a href="html_pages/siguranta.html"><div class="dropdown-option">Informatii pentru siguranta dvs.</div></a>
+                                </div>
+                                </filler>
+                            </li>
+                            <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                                <a href="html_pages/contact.html"><p class="dropbtn mb-3 text-size-20">CONTACT/REZERVARE</p></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav id="mobile-navbar">
+                        <div class="h-100 w-100 text-center">
+                            <img class="h-50 w-50 mt-4 picture-white" id="hamburger" src="pics\hamburger.png">
+                        </div>
+                    </nav>
+                </div>
+                <div id="mobile-navbar-dropdown" class="slideup text-special">
+                    <ul class="m-0 p-0" style="list-style: none;">
+                        <li class="position-relative h-100 text-special">
+                            <a href="index.html" class="h-100"><p class="pl-4 py-0 m-0 text-size-20 text-special">ACASA</p></a>
+                        </li>
+                        <li class="position-relative h-100 text-special">
+                            <filler class="h-100 d-flex justify-content-between">
+                            <p class="pl-4 py-0 m-0 text-size-20">DESPRE PENSIUNE</p>
+                            <img id="arrow-1" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="pics\up.png">
+                            </filler>
+                        </li>
+                        <div id="arrow-dropdown-1" class="slideup pl-5">
+                            <a href="html_pages/unde-suntem.html"><div class="text-special">Unde suntem?</div></a>
+                            <a href="html_pages/ce-va-oferim.html"><div class="text-special">Ce va oferim?</div></a>
+                            <a href="html_pages/programul-pensiunii.html"><div class="text-special">Programul pensiunii</div></a>
+                        </div>
+                        <li class="position-relative h-100 text-special">   
+                            <filler class="h-100 w-100 d-flex justify-content-between">
+                            <p class="pl-4 py-0 m-0 text-size-20 w-90">TARIFE SI SERVICII</p>
+                            <img id="arrow-2" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="pics\up.png">
+                            </filler>
+                        </li>
+                        <div id="arrow-dropdown-2" class="slideup pl-5">
+                            <a href="html_pages/tarife.html"><div class="dropdown-option text-special">Tarife</div></a>
+                            <a href="html_pages/mancare-bautura.html"><div class="dropdown-option text-special">Mancare si bautura</div></a>
+                            <a href="html_pages/rezervari-plata.html"><div class="dropdown-option text-special">Rezervari si Plata</div></a>
+                            <a href="html_pages/termeni-conditii.html"><div class="dropdown-option text-special">Termeni si conditii</div></a>
+                        </div>
+                        <li class="position-relative h-100 text-special">
+                            <a href="html_pages/galerie.html" class="h-100"><p class="pl-4 py-0 m-0 text-size-20 text-special">GALERIE FOTO</p></a>
+                        </li>
+                        <li class="position-relative h-100 text-special">
+                            <filler class="h-100 d-flex justify-content-between">
+                            <p class="pl-4 py-0 m-0 text-size-20">INFORMATII UTILE</p>
+                            <img id="arrow-3" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="pics\up.png">
+                            </filler>
+                        </li>
+                        <div id="arrow-dropdown-3" class="slideup pl-5">
+                            <a href="html_pages/ce-facem.html"><div class="dropdown-option text-special">Ce poti face la noi</div></a>
+                            <a href="html_pages/valea-lotrului.html"><div class="dropdown-option text-special">Valea Lotrului</div></a>
+                            <a href="html_pages/haiduci-paduri.html"><div class="dropdown-option text-special">Haiduci si Paduri</div></a>
+                            <a href="html_pages/siguranta.html"><div class="dropdown-option text-special">Informatii pentru siguranta dvs.</div></a>
+                        </div>
+                        <li class="position-relative h-100 text-special">
+                            <a href="html_pages/contact.html"><p class="pl-4 py-0 m-0 mb-3 text-size-20 text-special">CONTACT/REZERVARE</p></a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <section class="h-80 w-100">
+                <div class="container-fluid h-100 w-100">
+                    <div class="content-div container-fluid h-100 justify-content-center text-white mainbox">
+                        <div id="contact" class="index-divs overflow-auto box-color mx-4 mb-3">
+                            <h3 class="mt-3 mb-3 text-size-35">Locatie</h2>
+                            <div id="county" class="container-fluid pl-4 pb-3 text-size-20">
+                                Valea Lotrului, judetul Valcea
+                            </div>
+                            <div id="commune" class="container-fluid pl-4 pb-3 text-size-20">
+                                Comuna Malaia, strada Lotrului nr. 33
+                            </div>
+                            <div id="details" class="container-fluid pl-4 pb-3 text-size-20">
+                                DN 7A, km 19+800<br>
+                                ~3 km dupa barajul Bradisor, catre Voineasa<br>
+                                Cod Postal 247335<br>
+                            </div>
+                            <div id="phone" class="container-fluid d-flex pl-4 pb-3 text-size-20">
+                                <div>
+                                    Telefon     
+                                </div>
+                                <div>
+                                    <ul class="nb nm a0">
+                                        <li>0723234064</li>
+                                        <li>0723234065</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="rooms" class="index-divs overflow-auto box-color mx-4 mb-3">
+                            <h3 class="mt-3 mb-3 text-size-35">Camere</h2>
+                            <div id="features" class="container-fluid pl-4 pb-3 text-size-20">
+                                <p class="">Avem 12 camere, 4 triple, 8 duble. Camerele sunt dotate cu urmatoarele acomodari:</p>
+                                <ul>
+                                    <li class="">Baie</li>
+                                    <li class="">Frigider</li>
+                                    <li class="">TV</li>
+                                    <li class="">Satelit</li>
+                                    <li class="">Internet</li>
+                                    <li class="">Balcon (Etaj 1)</li>
+                                    <li class="">Aer Conditionat (Etaj 2)</li>
+                                </ul>
+                                <p class="">De asemenea, pensiunea va sta da dispozitie cu urmatoarele:</p>
+                                <ul>
+                                    <li class="">Restaurant si Bar</li>
+                                    <li class="">Gradina cu 3 foisoare</li>
+                                    <li class="">Gratar</li>
+                                    <li class="">Sala de jocuri (biliard, ping pong, air hockey, fotbal de masa)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="prices" class="index-divs overflow-auto box-color mx-4 mb-3">
+                            <h3 class="mt-3 mb-3 text-size-35">Tarife</h2>
+                            <div class="container-fluid pl-4 pb-3 text-size-20">
+                                <div class="">
+                                    Camera dubla - demipensiune
+                                </div>
+                                <div class="">
+                                    440 lei / noapte
+                                </div>  
+                            </div>
+                            <div class="container-fluid pl-4 pb-3 text-size-20">
+                                <div class="">
+                                    Camera tripla - demipensiune
+                                </div>
+                                <div class="">
+                                    625 lei / noapte
+                                </div>
+                            </div>
+                            <div id="more-details" class="container-fluid pl-4 pb-3 text-size-20">
+                                <br><br><br>
+                                Va avertizam ca in cazuri speciale (sarbatori etc) tarifele si conditile pentru rezervari se schimba<br>
+                                Vizitati pagina <i>tarife</i> pentru mai multe informatii.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="h-15">
+                <script>
+                    $(".dropdown").on("mouseenter", event => {
+                        $(event.currentTarget.children[0].children[0]).addClass("highlight-cat");
+                        $(event.currentTarget.children[0].children[1]).removeClass("slideup");
+                        $(event.currentTarget.children[0].children[1]).addClass("slidedown");
+                    }).on("mouseleave", event => {
+                        $(event.currentTarget.children[0].children[0]).removeClass("highlight-cat");
+                        $(event.currentTarget.children[0].children[1]).removeClass("slidedown");
+                        $(event.currentTarget.children[0].children[1]).addClass("slideup");
+                    })
+                    $(".dropdown-option").on("mouseenter", event => {
+                        $(event.currentTarget).addClass("highlight-subcat");
+                    }).on("mouseleave", event => {
+                        $(event.currentTarget).removeClass("highlight-subcat");
+                    })
+                    $("#hamburger").on("click", event => {
+                        $("#mobile-navbar-dropdown").toggleClass("slideup");
+                        $("#mobile-navbar-dropdown").toggleClass("slidedown");
+                        $("#arrow-dropdown-1").removeClass("slidedown");
+                        $("#arrow-dropdown-1").addClass("slideup");
+                        $("#arrow-dropdown-2").removeClass("slidedown");
+                        $("#arrow-dropdown-2").addClass("slideup");
+                        $("#arrow-dropdown-3").removeClass("slidedown");
+                        $("#arrow-dropdown-3").addClass("slideup");
+                        $('.arrow-dropdown').removeClass("rev");
+                        $('.arrow-dropdown').addClass("flip");
+                    })
+                    $("#arrow-1").on("click", event => {
+                        $("#arrow-dropdown-1").toggleClass("slideup");
+                        $("#arrow-dropdown-1").toggleClass("slidedown");
+                    })
+                    $("#arrow-2").on("click", event => {
+                        $("#arrow-dropdown-2").toggleClass("slideup");
+                        $("#arrow-dropdown-2").toggleClass("slidedown");
+                    })
+                    $("#arrow-3").on("click", event => {
+                        $("#arrow-dropdown-3").toggleClass("slideup");
+                        $("#arrow-dropdown-3").toggleClass("slidedown");
+                    })
+                    function myFunction() {
+                        var x = document.getElementById("myLinks");
+                        if (x.style.display === "block") {
+                            x.style.display = "none";
+                        } else {
+                            x.style.display = "block";
+                        }
+                    }  
+                    function flip(item) {
+                        if (item.classList.contains("flip")) {
+                            item.classList.remove("flip");
+                            item.classList.add("rev");
+                        }
+                        else {
+                            item.classList.remove("rev");
+                            item.classList.add("flip");
+                        }
+                    }
+                </script>
+            </footer>
+        </div>
+    </body>
+</html>

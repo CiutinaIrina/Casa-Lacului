@@ -1,0 +1,138 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo UI Dialog Window</title>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.js'></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/sunny/jquery-ui.css">
+    <style type="text/css">
+        .back-to-the-lesson {
+            margin-bottom: 2em;
+        }
+
+        body {
+            font-family: 'PT Sans', Arial, sans-serif;
+            margin: 5%;
+        }
+
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: #c00;
+        }
+
+        a:hover {
+            color: #f90;
+        }
+
+        .demo-wrap {
+            margin: 0 auto;
+            width: 450px;
+        }
+
+        .image-container {
+            padding: 10px;
+            text-align: center;
+            font-size: .85em;
+        }
+
+        .dialog-links {}
+
+        .dialog-links a {
+            text-decoration: none;
+            color: #c00;
+        }
+
+        .dialog-links a:hover {
+            color: #f90;
+        }
+
+        .dialog-links span {
+            color: #999;
+            padding: 0 10px;
+        }
+
+        .ui-dialog-title {
+            font-size: 12px !important;
+        }
+
+        .ui-button-text {
+            font-size: 12px;
+        }
+
+        .ui-dialog-buttonpane {
+            font-size: 0.8em;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.popup_image').each(function () {
+                var $imageSrc = $(this);
+                var $imageSrcAttr = $imageSrc.attr('href');
+                var $linkTitle = $(this);
+                var $linkTitleAttr = $imageSrc.attr('title');
+                //
+                var $dialog = $('<div class="image-container"><img src="' + $imageSrcAttr + '" /><div>').dialog({
+                    width: "auto",
+                    // height: 450,
+                    autoOpen: false,
+                    modal: true,
+                    title: $linkTitleAttr,
+                    // start animation
+                    show: {
+                        effect: "blind",
+                        duration: 1000
+                    },
+                    hide: {
+                        effect: "blind",
+                        duration: 1000
+                    },
+                    // end animation
+                    buttons: [
+                        {
+                            text: "Close",
+                            click: function () {
+                                $(this).dialog("close");
+                            }
+                        }
+                    ]
+                });
+                // disable auto focus (on the button)
+                $.ui.dialog.prototype._focusTabbable = function () { };
+                //
+                $imageSrc.click(function () {
+                    $dialog.dialog('open');
+                    return false;
+                });
+            });
+            //
+        });
+    </script>
+</head>
+
+<body>
+    <!-- ********** -- ********** -->
+    <nav>
+        <div class="back-to-the-lesson"><a href="../"> ← back to the lesson</a></div>
+    </nav>
+    <!-- ********** -- ********** -->
+    <div class="demo-wrap">
+        <div class="dialog-links">Images:
+            <span>|</span>
+            <a href="images/apple.jpg" class="popup_image" title="Apple">Apple</a>
+            <span>|</span>
+            <a href="images/bananas.jpg" class="popup_image" title="Bananas">Bananas</a>
+            <span>|</span>
+            <a href="images/grapes.jpg" class="popup_image" title="Grapes">Grapes</a>
+            <span>|</span>
+            <a href="images/pear.jpg" class="popup_image" title="Pear">Pear</a>
+            <span>|</span>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Casa Lacului</title>
+    <link rel="icon" href="..\pics\favicon.png">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripty.js"></script>
+</head>
+    
+<body class="container-fluid m-0 p-0 w-100">
+    <div id="site" class="container-fluid m-0 p-0 w-100" style="background-image: url('../pics/background1.jpg')">
+        <header class="h-10">
+            <div class="container-fluid d-flex h-100 w-100">
+                <div id="logo"class="align-self-center">
+                    <a href="..\index.html"><img src="..\pics\logo3.png"></a>
+                </div>
+                <nav id="pc-navbar" class="w-75 text-nowrap">
+                    <ul class="float-right h-100 d-flex" style="list-style: none;">
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <a href="..\index.html" class="h-100"><p class="dropbtn text-size-20">ACASA</p></a>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <filler class="h-100">
+                            <p class="dropbtn text-size-20">DESPRE PENSIUNE</p>
+                            <div class="slideup dropdown-content pa">
+                                <a href="unde-suntem.html"><div class="dropdown-option">Unde suntem?</div></a>
+                                <a href="ce-va-oferim.html"><div class="dropdown-option">Ce va oferim?</div></a>
+                                <a href="programul-pensiunii.html"><div class="dropdown-option">Programul pensiunii</div></a>
+                            </div>
+                            </filler>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">   
+                            <filler>
+                            <p class="dropbtn text-size-20">TARIFE SI SERVICII</p>
+                            <div class="slideup dropdown-content pa">
+                                <a href="tarife.html"><div class="dropdown-option">Tarife</div></a>
+                                <a href="mancare-bautura.html"><div class="dropdown-option">Mancare si bautura</div></a>
+                                <a href="rezervari-plata.html"><div class="dropdown-option">Rezervari si Plata</div></a>
+                                <a href="termeni-conditii.html"><div class="dropdown-option">Termeni si conditii</div></a>
+                            </div>
+                            </filler>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <a href="galerie.html" class="h-100"><p class="dropbtn mb-3 text-size-20">GALERIE FOTO</p></a>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <filler>
+                            <p class="dropbtn text-size-20">INFORMATII UTILE</p>
+                            <div class="slideup dropdown-content pa">
+                                <a href="ce-facem.html"><div class="dropdown-option">Ce poti face la noi</div></a>
+                                <a href="valea-lotrului.html"><div class="dropdown-option">Valea Lotrului</div></a>
+                                <a href="haiduci-paduri.html"><div class="dropdown-option">Haiduci si Paduri</div></a>
+                                <a href="siguranta.html"><div class="dropdown-option">Informatii pentru siguranta dvs.</div></a>
+                            </div>
+                            </filler>
+                        </li>
+                        <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                            <a href="contact.html"><p class="dropbtn mb-3 text-size-20">CONTACT/REZERVARE</p></a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav id="mobile-navbar">
+                    <div class="h-100 w-100 text-center">
+                        <img class="h-50 w-50 mt-4 picture-white" id="hamburger" src="..\pics\hamburger.png">
+                    </div>
+                </nav>
+            </div>
+            <div id="mobile-navbar-dropdown" class="slideup text-special">
+                <ul class="m-0 p-0" style="list-style: none;">
+                    <li class="position-relative h-100 text-special">
+                        <a href="..\index.html" class="h-100"><p class="pl-4 py-0 m-0 text-size-20 text-special">ACASA</p></a>
+                    </li>
+                    <li class="position-relative h-100 text-special">
+                        <filler class="h-100 d-flex justify-content-between">
+                        <p class="pl-4 py-0 m-0 text-size-20">DESPRE PENSIUNE</p>
+                        <img id="arrow-1" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="..\pics\up.png">
+                        </filler>
+                    </li>
+                    <div id="arrow-dropdown-1" class="slideup pl-5">
+                        <a href="unde-suntem.html"><div class="text-special">Unde suntem?</div></a>
+                        <a href="ce-va-oferim.html"><div class="text-special">Ce va oferim?</div></a>
+                        <a href="programul-pensiunii.html"><div class="text-special">Programul pensiunii</div></a>
+                    </div>
+                    <li class="position-relative h-100 text-special">   
+                        <filler class="h-100 w-100 d-flex justify-content-between">
+                        <p class="pl-4 py-0 m-0 text-size-20 w-90">TARIFE SI SERVICII</p>
+                        <img id="arrow-2" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="..\pics\up.png">
+                        </filler>
+                    </li>
+                    <div id="arrow-dropdown-2" class="slideup pl-5">
+                        <a href="tarife.html"><div class="dropdown-option text-special">Tarife</div></a>
+                        <a href="mancare-bautura.html"><div class="dropdown-option text-special">Mancare si bautura</div></a>
+                        <a href="rezervari-plata.html"><div class="dropdown-option text-special">Rezervari si Plata</div></a>
+                        <a href="termeni-conditii.html"><div class="dropdown-option text-special">Termeni si conditii</div></a>
+                    </div>
+                    <li class="position-relative h-100 text-special">
+                        <a href="galerie.html" class="h-100"><p class="pl-4 py-0 m-0 text-size-20 text-special">GALERIE FOTO</p></a>
+                    </li>
+                    <li class="position-relative h-100 text-special">
+                        <filler class="h-100 d-flex justify-content-between">
+                        <p class="pl-4 py-0 m-0 text-size-20">INFORMATII UTILE</p>
+                        <img id="arrow-3" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="..\pics\up.png">
+                        </filler>
+                    </li>
+                    <div id="arrow-dropdown-3" class="slideup pl-5">
+                        <a href="ce-facem.html"><div class="dropdown-option text-special">Ce poti face la noi</div></a>
+                        <a href="valea-lotrului.html"><div class="dropdown-option text-special">Valea Lotrului</div></a>
+                        <a href="haiduci-paduri.html"><div class="dropdown-option text-special">Haiduci si Paduri</div></a>
+                        <a href="siguranta.html"><div class="dropdown-option text-special">Informatii pentru siguranta dvs.</div></a>
+                    </div>
+                    <li class="position-relative h-100 text-special">
+                        <a href="contact.html"><p class="pl-4 py-0 m-0 mb-3 text-size-20 text-special">CONTACT/REZERVARE</p></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <section class="h-80 w-100">
+            <div class="container-fluid h-100 w-100">
+                <div class="container-fluid box-color h-auto w-90 justify-content-center text-special mt-5 p-5">
+                    <h1 class="mt-1">Haiduci si Panduri</h1>
+                    <div class="w-25 quick-select">
+                        <div class="d-flex" id="">
+                            <h4 class="mr-4">Content</h4>
+                            <p id="show-button" class="toggle hidden pt-1">SHOW</p>
+                            <p id="hide-button" class="toggle active pt-1">HIDE</p>
+                        </div>
+                        <div id="list-of-content" class="active m-1 ml-5">
+                            <a href="haiduci-panduri.html#hp1" class="no-highlight">
+                                <p>1. Haiduci</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp2" class="no-highlight">
+                                <p>2. Panduri</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3" class="no-highlight">
+                                <p>3. Lista de Haiduci si Panduri</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.1" class="no-highlight">
+                                <p class="m-1 mr-2">3.1 Tudor Vladimirescu</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.2" class="no-highlight">
+                                <p class="m-1 mr-2">3.2 Iancu Jianu</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.3" class="no-highlight">
+                                <p class="m-1 mr-2">3.3 Cheorghe Magheru</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.4" class="no-highlight">
+                                <p class="m-1 mr-2">3.4 Petrache Poenaru</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.5" class="no-highlight">
+                                <p class="m-1 mr-2">3.5 Andrei Popa</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.6" class="no-highlight">
+                                <p class="m-1 mr-2">3.6 Ionita Tunsu</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.7" class="no-highlight">
+                                <p class="m-1 mr-2">3.7 Pavel Lotru</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.8" class="no-highlight">
+                                <p class="m-1 mr-2">3.8 Marius Parv</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.9" class="no-highlight">
+                                <p class="m-1 mr-2">3.9 Anghel Panait</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.10" class="no-highlight">
+                                <p class="m-1 mr-2">3.10 Amza Scortan</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.11" class="no-highlight">
+                                <p class="m-1 mr-2">3.11 Ionica Lambru</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.12" class="no-highlight">
+                                <p class="m-1 mr-2">3.12 Mihail Calimanu</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.13" class="no-highlight">
+                                <p class="m-1 mr-2">3.13 Radu Ursan</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.14" class="no-highlight">
+                                <p class="m-1 mr-2">3.14 Neagu Papura</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.15" class="no-highlight">
+                                <p class="m-1 mr-2">3.15 Ene Hatu</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.16" class="no-highlight">
+                                <p class="m-1 mr-2">3.16 Popa Sapca</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.17" class="no-highlight">
+                                <p class="m-1 mr-2">3.17 Baba Novac</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.18" class="no-highlight">
+                                <p class="m-1 mr-2">3.18 Gruia Novac</p>
+                            </a>
+                            <a href="haiduci-panduri.html#hp3.19" class="no-highlight">
+                                <p class="m-1 mr-2">3.19 Iorgu Iorgovan</p>
+                            </a>
+
+                        </div>
+                    </div>
+                    <h3 id="hp1" class="m-4">Haiducii</h3>
+
+                    <p class="m-1"><w>____</w><w>____</w>Haiducii sunt prezenți în toate țările din Balcani ca luptători pentru dreptate, împotriva boierilor locali și ai
+                    străinilor asupritori. Trecuți sub tăcere de manualele din epoca regilor, considerați elemente care provoacă dezordine,
+                    priviți cu circumspecție de comuniști, pe de o parte considerați bunicii luptei de clasă, pe de altă parte, considerați
+                    un exemplu nu tocmai potrivit pentru societate, în pericol de a cădea în uitare azi, haiducii și pandurii, au
+                    reprezentat pentru popor, adevărați eroi.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>În special, timp de o sută de ani, Oltenia cunoaște o escaladare a fenomenului; după Pacea de la Passarowitz, când
+                    Oltenia a trecut în stăpânirea austriacă și până după revoluția condusă de Tudor Vladimirescu, haiducia a constituit, de
+                    multe ori, singura soluție în fața represiunilor și nedreptăților.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>În Oltenia (un adevărat ținut al haiducilor), haiducia apare ca fenomen, mult mai devreme, de fapt după 1560, odată cu
+                    Baba Novac, continuă cu legendarii Gruia Novac (unul dintre fii săi), cu Iorgu Iorgovan și cunoște o adevărată explozie,
+                    devenind o modă, în timpul ocupației austriece pânădupă revoluția lui Tudor Vladimirescu.Timp de aproximativ 300 de ani,
+                    (cca.1560-1860) există un lung și neîntrerupt șir de haiduci celebri.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Vremea haiducilor apune în preajma unirii principatelor, odată cu revoluționarul Popa Șapcă, ultimul care ridică la
+                    luptă cetele de haiduci.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Cum datele despre haiduci sunt de multe ori contradictorii, considerați tâlhari de către stăpânitori și eroi de către
+                    popor, o prezentare a lor într-o lumină neutră este o sarcină ingrată.</p>
+
+                    <h3 id="hp2" class="m-4">Pandurii</h3>
+
+                    <p class="m-1"><w>____</w><w>____</w>Pandurii, în România, în majoritatea cazurilor, sunt tot haiduci înrolați într-o oaste paramilitară (cea a pandurilor)
+                    care a stârnit revoluția de la 1821.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Termenul de pandur este folosit prima dată în lumea germanică, derivat din denumirea grupurilor de vikingi care făceau
+                    diversiuni în vremuri străvechi, când vikingii pustiiau sudul mării Baltice.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>În epoca modernă, prusacii au reinventat poveștile, folosind trupe special pregătite pentru producerea diversiunilor în
+                    armata habsburgică: asasinarea comandanților, răpirea unor persoane de rang înalt, distrugerea depozitelor de muniție,
+                    trupe speciale care acționau, de regulă, în spatele frontului. Habsburgii au preluat și ei metoda, răspunzându-le
+                    prusacilor cu aceeași monedă.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>În Oltenia, termenul de panduri a fost introdus de austrieci. În momentul în care au realizat că trupele lor nu reușesc
+                    să se impună într-o regiune străină, plină de haiduci care îi atacau când nu erau pregătiți, la locuri de popas, hanuri,
+                    crâșme, locuri strâmte au hotărât să angajeze mercenari din rândul populației din zonă, pentru prinderea haiducilor.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Numai că în Oltenia totul a luat o întorsătură neașteptată, mulți haiduci au găsit bună ideea ca în loc să jefuiască
+                    boierii sau imperialii, să ia banii ca simbrie fără să facă nimic; timp de aproape doi ani, austriecii au plătit simbrie
+                    unor haiduci ca să prindă alți haiduci, nici un haiduc nu a fost prins. A fost picătura finală pentru austrieci, care au
+                    decis să părăsească Oltenia cu ani buni înainte ca aceasta să fie retrocedată pe baza tratatelor internaționale.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>După plecarea austriecilor, titlul de pandur și-a schimbat, pentru un timp, întru-câtva, înțelesul, devenind un fel de
+                    cete menite să apere boierii de haiduci (un fel de poliții personale), denumirea era preluată de la austrieci și venea
+                    să semnifice un corp de arnăuți mai mare și bine înarmat.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Când a izbucnit războiul ruso-turc, cuvântul pandur și-a schimbat iarăși înțelesul. Țarul a dorit, inițial, închirierea
+                    unor oameni ai boierilor care cunoșteau locurile și astfel, le-ar fi ușurat sarcina.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Boierii au refuzat să se despartă de gărzile lor, care revin acum la vechea denumire de arnăuți, pentru că, între timp,
+                    țarul dă sfoară în țară căînrolează volunari, panduri, contra unei solde foarte atrăgătoare. Imediat apar voluntari din
+                    toate colțurile țării, dornici să lupte cu turcii. Majoritatea celor înrolati sunt, de data aceasta, haiduci dar printre
+                    ei apar și arnăuți și alte categorii de oameni.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Într-o singură săptămână, numărul pandurilor înrolați atinge cifra de 50.000, care erau împărțiți în cete de 1000-1500
+                    de oameni, sub conducerea unor căpetenii alese de ei, în general sînt căpetenii de haiduci.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>După plecarea rușilor, pandurii ajuseseră o castă militară, cu uniforme, tabere de instrucție, corturi și tot
+                    echipamentul militar aferent, muniție și armament, dar care, nemaifiind plătiți de țar, constituiau o forță greu de
+                    ținut în frâu, mai ales că erau oameni obișnuiti cu luptele.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>În momentul în care pandurii plecau conduși de Tudor Vladimirescu, termenul de pandur iși schimbă pentru ultima dată
+                    sensul, în membru al unei armate paramilitare de revoluționari, sau o armată de haiduci și răsculați întocmită după
+                    toate legile moderne ale războiului.</p>
+
+                    <h3 id="hp3" class="m-4">Panduri și haiduci celebri din Oltenia:</h3>
+
+                    <ul style="margin-left:90px;padding:0px">
+                    <li>Tudor Vladimirescu (Domnul Tudor) din Vladimiri, Gorj</li>
+
+                    <li>Iancu Jianu din Caracal, Olt</li>
+
+                    <li>Gheorghe Magheru Bârzeiu de Gilort, județul Gorj</li>
+
+                    <li>Petrache Poenaru din Bănești,Vâlcea</li>
+
+                    <li>Andrei Popa (Andri Popa) din Seaca, Dolj</li>
+
+                    <li>Ioniță Tunsu (paraclisierul sau răspopitul) din Optași, Olt</li>
+
+                    <li>Preda Drugănescu (Drugă) din Drăgășani,Vâlcea</li>
+
+                    <li>Pavel Lotru din Bălcești, Vâlcea</li>
+
+                    <li>Marius Pârv din Ploștina, Gorj</li>
+
+                    <li>Anghel Panait (Anghel Șaptecai) din Vâlcele, Olt</li>
+
+                    <li>Amza Scorțan din Amărăști, Dolj</li>
+
+                    <li>Toma Alimanu din Ostrovu, Mehedinți</li>
+
+                    <li>Ionică Lambru din Ostrovu, Mehedinți</li>
+
+                    <li>Mihail Călimanu din Călimani, Vâlcea</li>
+
+                    <li>Radu Ursan din Jupânești, Gorj</li>
+
+                    <li>Neagu Papură din Daneți, Dolj</li>
+
+                    <li>Ene Hățu din Celaru, Dolj</li>
+
+                    <li>Popa Șapcă din Celei, Olt</li>
+                    </ul>
+
+
+                    <h4 id="hp3.1" class="m-3">Tudor Vladimirescu</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Tudor Vladimirescu (n. 1780, Vladimiri – d. S.V. 7 iunie 1821 Târgoviște) a fost o figură emblematică pentru istoria
+                    Țării Românești la începutul secolului al XIX-lea, fiind conducătorul Revoluției de la 1821 și al pandurilor.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>S-a născut în satul Vladimiri (Gorj), într-o familie de moșneni. A învățat carte și limba greacă în casa boierului
+                    aromân Ioniță Glogoveanu, din Craiova, care a făcut din inteligentul și destoinicul băiat administrator de moșie și care
+                    l-a întrebuințat în afacerile de negoț, mai ales la exportul de vite.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Tudor Vladimirescu și-a constituit o avere prin cumpărare de pământ, făcând comerț pe cont propriu. S-a emancipat din
+                    slujba lui Glogoveanu intrând în rândurile pandurilor – armată cu obligații semipermanente – și participă la războiul
+                    ruso-turc din 1806 – 1812, recompensat de oficialitățile ruse cu ordinul de cavalerie Ordinul Vladimir, clasa a III-a.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>În 1806 a fost numit vătaf de plai la Cloșani, adică administrator al unui district de munte, funcție pe care o va
+                    deține până în 1820. În perioada 14 iunie-26 decembrie 1814 a efectuat o călătorie la Viena, în perioada Congresului de
+                    Pace de la Viena (1814-1815), pentru a lichida moștenirea soției lui Nicolae Glogoveanu (fiul lui Ioniță Glogoveanu),
+                    decedată la Viena, și pentru a-i aduce în țară fetița.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Cunoscător al limbii germane, Tudor Vladimirescu a putut să urmărească problemele politice care se dezbăteau în presă în
+                    capitala Imperiului Austriac.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Întors în țară la începutul anului 1815, Tudor a aflat că garnizoana otomană din Ada-Kaleh, care cutreierase județele
+                    Mehedinți și Gorj, distrusese și gospodăria lui de la Cerneți și îi luase toate bucatele.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Prezent apoi în capitala țării pentru susținerea unui proces de moșie în fața Divanului, Tudor află de hotărârea Eteriei
+                    de a porni mișcarea de eliberare a Greciei. Considerând momentul prielnic pentru a ridica poporul la luptă, are unele
+                    discuții cu reprezentanții Eteriei pentru cooperare militară, pentru ca „pandurii să înlesnească trecerea lui Ipsilanti
+                    peste Dunăre“.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>A semnat o înțelegere cu Comitetul de oblăduire prin care Tudor urma să ridice „norodul la arme“, având drept obiectiv
+                    înlăturarea regimului fanariot. Conținutul prea revoluționar al „Proclamației de la Padeș“ i-a speriat pe boieri, care
+                    trimit corpuri de oaste pentru a-l opri. Adresându-i-se lui Nicolae Văcărescu, unul dintre cei însărcinați cu
+                    înfrângerea oștirii pandurilor, Tudor arată că „pesemne dumneata pă norod cu al căror sânge s-au hrănit și s-au poleit
+                    tot neamul boieresc, îl socotești nimic, și numai pe jefuitori îi numeri patrie… Dar cum nu socotiți dumneavoastră că
+                    patria se cheamă poporul, iar nu tagma jefuitorilor“. Diplomat, Tudor asigură în permanență pașalele de la Dunăre și
+                    Poarta Otomană că poporul s-a revoltat din cauza „cumplitelor patimi ce suferă din partea unirii pământenilor boieri, cu
+                    cei după vremi trimiși domni și ocârmuitori acestui norod“.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Intrând în București în fruntea „adunării poporului“, este primit cu entuziasm de către masele populare din capitală.
+                    Preia de fapt, în primăvara anului 1821, conducerea țării, fiind numit de popor „Domnul Tudor“. Prezența lui Alexandru
+                    Ipsilanti la București în fruntea unei armate nedisciplinate, după ce acțiunea lui fusese dezavuată, ca și a românilor
+                    de altfel, de către Rusia, l-au pus într-o situație dificilă. Tudor îi cere conducătorului Eteriei să treacă Dunărea,
+                    așa cum promisese inițial, pentru ca Țara Românească să nu fie transformată în teatru de război.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Conducătorii eteriștilor au pus la cale un complot pentru a-l îndepărta. Ridicat prin trădare de la Golești, la 21 mai
+                    Tudor a fost ucis de șefii eteriștilor la Târgoviște, în noaptea de 27 spre 28 mai, învinuit probabil de colaborare cu
+                    otomanii împotriva eteriștilor, fapt pe care istoria nu l-a confirmat niciodată. L-a avut ca dușman pe redutabilul
+                    locotenent-colonel Dimitrie Papazoglu, decorat la Paris de Alexandru I pentru merite deosebite în executarea de hărți
+                    militare.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Tudor Vladimirescu a avut un frate (Papa) și o soră (Constandina) ai căror descendenți trăiesc și în ziua de azi în
+                    Oltenia.</p>
+
+                    <h4 id="hp3.2" class="m-3">Iancu Jianu</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Iancu Jianu (născut 1787, decedat 14 decembrie 1842) a fost un vestit haiduc din Oltenia. Din descrierile timpului
+                    rezultă că era un desăvârșit mânuitor al armelor și un foarte bun călăreț. Se zicea că nu are egal în țară într-o luptă
+                    dreaptă deși nu avea un fizic impresionant, fiind mai degrabăscund și zvelt. Era însă foarte îndemânatic cu armele,
+                    îndrazneț, energic și avea un farmec personal deosebit. Era fiul unei familii destul de înstărite de slugeri pe
+                    domeniile boierilor din Romanați.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>La apogeul puterii, Iancu Jianu conducea în jur de 2.000 – 3.000 de haiduci și trei tunuri. Acțiunile sale erau
+                    îndreptate nu numai împotriva boierilor, ci aveau și un puternic caracter național (antifanariot, antihabsburgic, dar
+                    mai ales antiotoman). A substituit o perioadă puterea domneascăîn regiune.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Momentul culminant îl constituie campania dusă de haiduci în 1809 la sud de Dunăre, în urma căreia sînt incendiate
+                    Vidinul și Plevna, fiind ucis și pașa din Vidin , în replică la acțiunile pașalei care atacase Craiova și mai multe sate
+                    din Oltenia. Este, de asemenea, distrusă din temelii raiaua turcească de la Turnu Măgurele pe care turcii n-au mai
+                    reușit s-o reconstruiască niciodată. Iancu Jianu ajunsese să se poarte ca un domn, făcând danii bisericilor, construind
+                    clădiri pentru binele obștii în Craiova și Caracal.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Este prins printr-un șiretlic pe când mergea neînsoțit, pe străzile Bucureștiului. Este osândit la moarte, fiind însă
+                    iertat în urma unei întâmplari cu aer romantic. Potrivit legii pământului, dacă o fată de neam cerea de soț un osândit,
+                    acesta era iertat. Mai multe domnițe de la curte își exprimă aceastădorință. Iancu Jianu o alege pe Sultana Gălășescu, o
+                    jupâniță din anturajul domniței Ralu, fiica lui Caragea vodă, și renunță treptat în următorii ani la viața de haiduc.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>În 1821 Iancu Jianu, la anii maturi, îl întâmpină într-un cadru emoționant pe Tudor Vladimirescu. Cetele de haiduci
+                    strânse de Jian făcând joncțiunea la Slatina cu armata lui Tudor, haiducii lui Iancu Jianu intră în rândurile
+                    pandurilor.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Primul steag al României, steagul purtat de Tudor și realizat de Petrache Poenaru, la intrarea în București, steag care
+                    este expus la muzeul Cercului Militar Central București a fost donat guvernului României de un urmaș al jienilor. După
+                    moartea lui Tudor Vladimirescu, steagul a fost dus de un pandur lui Iancu Jianu, care l-a zidit ca pe un odor de mare
+                    preț in pereții casei unuia dintre fii săi, unde steagul a stat peste o sută de ani.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>S-a stins din cauze naturale, la 55 de ani, departe de tumultul haiduciei. În biserica Adormirea Maicii Domnului aflată
+                    în orașul Caracal, ctitorită de familia Jianu, se află înmormântat vestitul haiduc.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Haiduc sau boier mărunt, Iancu Jianu rămâne o figură legendară și romantică într-o perioadă foarte tulbure din Țara
+                    Românească.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>S-au păstrat câteva fragmente din înscrisurile lui Iancu Jianu în care își povestea faptele:</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>“Legai pe toți din ocnă, slobozii burduful și scosei pe toți haiducii din ocnă și plecai cu dânșii până la un loc. Un
+                    haiduc vestit ce-i zicea Voicu Iabras, strânse și el o ceata de ai lui, plecând împreună și trecui Oltul la Slatina”</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>“nu avea ce să ne facă. În multe rânduri am bătut pe carserdarul Iamandi Giuvara urât mirositorul. Cum o putea muierea
+                    lui să steie cu puturosul de Giuvara cel nespălat cu anii?”</p>
+
+                    <h4 id="hp3.3" class="m-3">Gheorghe Magheru</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Gheorghe Magheru (n. 8 aprilie 1802, Bârzeiu de Gilort, județul Gorj – d. 23 martie 1880, București) a fost un comandant
+                    militar în oastea lui Tudor Vladimirescu (1821), apoi comandant în războiul ruso-turc din 1828-1829, vătaf al județului
+                    Romanați (din 1831), ministru de finanțe în cabinetul revoluționar din Țara Românească în anul 1848, apoi, temporar,
+                    comandant general al trupelor revoluționare din Țara Românească. La 10 octombrie/28 octombrie 1848, Magheru s-a refugiat
+                    în Transilvania, iar de acolo la Triest și în cele din urmă la Viena. În 1857 s-a reîntors în Țara Românească, unde a
+                    redevenit activ politic.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Gheorghe Magheru era descendent unei familii transilvane stabilite în Oltenia.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Haiduc celebru din zona Băileștiului, pandur în armata lui Tudor Vladimirescu, unul dintre conducătorii revoluției de la
+                    1848 din Țara Românească, membru în guvernul provizoriu revoluționar pașoptist, generalul armatei din principat,
+                    luptător pentru Unirea Principatelor Române. Era văr cu Tudor Vladimirescu, prieten apropiat cu Nicolae Bălcescu și
+                    sprijinitor al lui Avram Iancu.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>La o vârstă foarte fragedă a fost obligat, împreună cu familia, să ia calea pribegiei, când, în august 1806, un corp
+                    expediționar turc sub comanda lui aga Bechir, nepotul pașei Regep a prădat Oltenia, incendiind și satul Bârzeiu de
+                    Gilort. Însă turcii au fost capturați și omorâți de haiduci în apropierea satului Obârșia, Gorj. Printre acei haiducii
+                    se aflau tatăl și fratele său mai mare.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Devine vestit de foarte tânăr, la doar 16 ani, când se face remarcat pentru vitejia sa luptând cu ceata de haiduci din
+                    care făcea parte împreună cu fratele său, împotriva turcilor. La 14 septembrie 1828, la Băilești a avut loc o importantă
+                    luptă între turci (25.000), care ocupaseră satul, și ruși (28.000), alături de care luptă și un detașament de1.200 de
+                    panduri. După bătălie, turcii au fost izgoniți. Pentru faptele sale de vitejie din timpul războiului ruso-turc, Magheru
+                    a primit rangul de căpitan de panduri și a fost decorat de țarul Rusiei cu ordinul Sf. Ana în gradul de cavaler.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>În 1821 i s-a alăturat cu grupul său de panduri lui Tudor Vladimirescu. După plecarea lui Tudor Vladimirescu împreună cu
+                    grosul armatei pandurilor la Craiova, Gheorghe Magheru a fost lăsat la mânăstirea întărită de la Tismana pentru
+                    asigurarea ariergărzii, împreună cu fratele și cu vărul său, Papa Vladimirescu, fratele lui Tudor Vladimirescu. Împreună
+                    cu alți panduri din subordine, s-au ținut de răzbunări împotriva boierilor și slujbașilor domnești. Aflând de faptele
+                    lor, Tudor Vladimirescu a decis să-i aducă lângă el.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>După moartea lui Tudor Vladimirescu, Gheorghe Magheru a mai haiducit câțiva ani, apoi a fost înrolat în armată, unde a
+                    fost avansat rapid în grad datorită calităților sale.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>A fost membru al Societății secrete masone Frăția, 1840, alături de Nicolae Bălceascu, Ion Ghica, Christian Tell, care
+                    conspira împotriva prințului Bibescu.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>A format la Craiova guvernul provizoriu revoluționar alături de Nicolae Bălcescu, și Costache Romanescu.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Odată cu detronarea prințului Bibescu și instalarea guvernului revoluționar la București, a făcut parte din guvernul
+                    provizoriu revoluționar național, apoi a devenit generalul armatei române.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>După ce armata otomană a înlăturat guvernul revoluționar, Magheru a refuzat să accepte înfrângerea revoluției și s-a
+                    retras cu trupele revoluționareîn Oltenia, unde a organizat tabăra militară de la Râureni, pe câmpul lui Traian, lângă
+                    Râmnicu Vâlcea.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Declarația lui Gheorghe Magheru:</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>„Eu, fraților, sunt român și, ca român, mă simt ferice de a muri pentru țara mea”.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Pe aleea ce duce spre Complexul muzeal Gheorghe Magheru a fost montată o placă de marmură cu istoricul locului: Pe acest
+                    loc, în toamna anului 1848, generalul Gheorghe Magheru și-a instalat tabăra militară revoluționară de panduri și
+                    voluntari. În memoria acestui eveniment, în anul 1973, cu prilejul aniversării a 125 de ani de la Revoluția din 1848,
+                    s-a ridicat un obelisc și a fost inaugurat muzeul de la Râureni.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Nevoit să se exileze la Viena, a continuat să susțină cauza revoluționară și unirea principatelor Moldova și Țara
+                    Românească.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>A revenit în Țara Românească în august 1857, iar în decembrie 1857 a fost ales deputat de Gorj în adunarea ad-hoc de la
+                    București. A fost unul dintre fondatorii Partidei Naționale, mișcare care a promovat unirea principatelor române și a
+                    sprijiit democratizarea și modernizarea lor.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Bulevardul Magheru din București și străzi din Sibiu și Timișoara îi poartă numele.</p>
+
+                    <h4 id="hp3.4" class="m-3">Petrache Poenaru</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Petrache Poenaru (n. 10 ianuarie 1799, Benești, județul Vâlcea – d. 2 octombrie 1875, București) a fost un pedagog,
+                    inventator, inginer și matematician român, membru al Academiei Române.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Petrache Poenaru, scapat ca prin minune de la moarte, plecă la rugămințile lui Tudor Vladimirescu să studieze la Viena,
+                    iar apoi la Paris, unde studiază filologia și politehnica, devenind absolvent al Școlii Politehnice din Paris.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>În timpul studiilor brevetează primul toc rezervor din lume, mai întâi la Viena, apoi la Paris (brevet 3208, din 25 mai
+                    1827), cu titlul Condeiul portăreț fără sfârșit, alimentându-se însuși cu cerneală.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Primul român care a călătorit cu trenul:</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>La 15 septembrie 1830, se deschide în Anglia prima cale ferată din lume, care va face legătura între Liverpool și
+                    Manchester. La 27 octombrie 1831 tânărul Petrache Poenaru, spunea printre altele:</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>„Am făcut această călătorie cu un nou mijloc de transport, care este una din minunile industriei secolului… douăzeci de
+                    trăsuri legate unele cu altele, încarcate cu 240 de persoane sunt trase deodată de o singură mașină cu aburi…”</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>A fost unul dintre organizatorii învățământului național românesc, fondatorul Colegiului Național Carol I din Craiova.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>În tinerețe a fost secretarul personal al lui Tudor Vladimirescu iar ulterior, revenind în țară după călătorii și studii
+                    tehnice, s-a implicat în domenii legate de învățământ, administrație și inovație.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Între 1834 – 1836 a insistat pentru introducerea Sistemului Metric Zecimal în Muntenia.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Împreună cu alți oameni de seamă a contribuit la înființarea în 1835 la Pantelimon a Școlii de Agricultură[2]. Din
+                    poziția de membru al EforieiȘcolilor Naționale în 1850 devine co-fondator al Școlii de Poduri și Șosele (actuala
+                    Universitate de Construcții din București). În 1870, spre sfârșitul vieții sale, a fost ales membru al Academiei Române.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>În discursul de recepție la primirea în Academia Română, a susținut că cele 5 luni cât a fost pandur și haiduc i-au
+                    schimbat complet destinul și va păstra toată viața în inimă acele clipe mărețe.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Primul ziar românesc:</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Foaia de propagandă a armatei lui Tudor Vladimirescu, apărută la inițiativa sa, a însemnat nu numai primul ziar românesc
+                    de propagandă, așa dupăcum îi arată și numele, dar și unul dintre primele exemple din istoria presei scrise din România
+                    de prezentare corectă a idealurilor revoluționare ale lui Tudor.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Revoluționar la 1848:</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Petrache Poenaru a participat la Revoluția de la 1848 și a făcut parte din Comisia pentru liberarea robilor. A semnat P.
+                    Poenaru pe primul comunicat al comisiei, din 12 iulie 1848, alături de Iosafat Snagoveanul și C. Bolliac (document
+                    original la Muzeul Național de Istorie a României). Din 1856 a fost venerabilul unei loji masonice bucureștene. Devine
+                    un apropiat al domnitorului Alexandru Ioan Cuza. Dintre descendenții cunoscuți se poate aminti scriitoarea Alice
+                    Voinescu (1885 – 1961) născută la Turnu Severin.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Fosta stație de metrou Semănătoarea îi poartă acum numele.</p>
+
+                    <h4 id="hp3.5" class="m-3">Andrei Popa</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Andrei Popa (sau Andri Popa) este un haiduc originar din Seaca, județul Dolj, se alătură lui Iancu Jianu și atacă
+                    Vidinul și Plevna.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Ceata lui avea sarcina să recupereze din seraiul pașalei și din seraiul vânzătorilor de cadâne, cele câteva zeci de fete
+                    furate de turci. Numai că Andri Popa nu se poate hotărî și încarcă toate cadânele găsite, peste 500, în mai multe căruțe
+                    și le trece Dunărea în Oltenia.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Aici, fetelor pământului le dă drumul la casele lor, apoi le vinde pe celelalte ca neveste la oameni, erau frumoase și
+                    supuse așa că aveau destulăcăutare. Prețurile depindeau de mușteriu, de la prețuri mai mult simbolice, o șa, o armă,
+                    până la sume bune de bani.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Trece chiar munții în Transilvania cu peste o sută de cadâne, care îi rămăseseră și le vinde și pe ele ca neveste în
+                    satele de munte locuite de români. Tot despre aceasta întâmplare; după 3-4 ani, un velpașa și oameni ai domniei vin să
+                    caute cadânele, promițând că vor fi libere să plece unde vor, dar cele câteva zeci pe care reușesc să le afle din vorba
+                    în vorba refuză sa plece. Aveau de acum copii, familii, deveniseră țărănci.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Tot despre Andrei Popa se spune că este întemeietorul satului Palilula, un sat în preajma Craiovei ascuns privirilor de
+                    o vale săpată de ploi probabil, chiar în vârful unui deal, o forma ciudată de relief, în plus dealul este ascuns
+                    privirilor din două părți de păduri iar în părțile libere, valea fiind ascunsă de creasta dealului.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Se zice că și-a ales câteva cadâne și a trăit mult timp ascuns acolo împreună cu tovarașii săi, nu ieșea decât să
+                    haiducească și vara când fântâna seca pe perioadă de secetă. Fântânile sunt și azi o problemă la Palilula, datorită apei
+                    freatice care este la o adâncime foarte mare.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Se mai spune că satul întemeiat de el nu a fost găsit niciodată de potere, nici de turci, nici măcar de nemți în primul
+                    război mondial, când au ocupat Craiova.</p>
+
+                    <h4 id="hp3.6" class="m-3">Ioniță Tunsu</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Ioniță Tunsu zis și Tunsu, Răspopitul, Paracliserul, originar din Optași, județul Olt, a fost un haiduc romăn.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>“Un om voinic, frumos, cu știință de carte și cu o voce foarte plăcută, iar episcopul Ilarion al Argeșului, care-l
+                    prețuia, își pusese gând să-l roage pe mitropolit să-l facă diacon și chiar să-l investească în haina preoției”, scria
+                    George Potra în “Bucureștii de altădată“.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>A fost paracliser la Biserica Sfinții Voievozi de pe Calea Griviței și locuia chiar în curtea bisericii.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>La un moment dat s-a răzgândit (este neclar din ce motive) în privința ocupației sale și a refuzat să mai toarne ulei în
+                    candele. Și-a tuns părul și a plecat în pădurea Strehareț din Olt să haiducească. Și-a strâns repede o ceată. A plecat
+                    spre Craiova, la început ceata sa a fost unită cu cea a lui Amza Scorțan prin împrejurimile Craiovei, apoi cu cea a lui
+                    Anghel Panait înapoi în Olt.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Devine pandur în armata lui Tudor Vladimirescu în 1821 și ajunge din nou la București, apoi la Drăgășani. Apoi, împreună
+                    cu oamenii lui acoperăîntreaga distanță dintre București și Craiova. Cu ei calcă pe neguțătorii bogați și pe boierii
+                    care se aflau în țară, la moșiile lor. Se spune că Tunsu nu omora, nu schingiuia și lăsa păgubașului bani de drum și de
+                    cheltuială. Mai mult, zice folclorul, dăruia bani văduvelor cu copii, gazdelor sărace careîl ascundeau, dar avea grijă
+                    și de ceată și cheltuia și pe pistoale.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Generalul Kiseleff a auzit de faptele lui Tunsu și i-a dat ordin ministrului de Interne, Iordache Filipescu, să-l prindă
+                    cât mai curând. Ioniță l-a pândit pe Kiseleff la un popas între București și Târgoviște, dar nu l-a împușcat, deși
+                    putea. I-a scris generalului: “Capul excelenței tale a fost azi în bătaia puștii mele. N-am voit să te omor, căci omoram
+                    pe un părinte iubit de țară.” Kiseleff a dat ordin să fie prins, dar să nu se atingă nimeni de viața lui Tunsu. Agia i-a
+                    întins o cursă. A promis o recompensă de 1.000 de lei și scutirea de impozite celui care îl va trăda pe Tunsu. Haiducul
+                    a fost trădat de finul său.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>La podul Grozăvești îl aștepta potera. Haiducii au fost împușcați. Tunsu și alți doi, răniți, s-au aruncat în apa
+                    Dâmboviței. Pe Tunsu l-au gasit aghiotanții lui Kiseleff și l-au dus degrabă la medici. Chinul rănitului a durat până
+                    spre dimineață. A fost înmormântat la marginea drumului care ducea spre Spitalul Pantelimon, în apropiere de Mărcuța.</p>
+
+                    <h4 id="hp3.7" class="m-3">Pavel Lotru</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Pavel Lotru din Bălcești, poate cel mai eficient haiduc din Oltenia, a fost căutat mai bine de 3 ani de imperiali și
+                    potere, dar nu a fost prins. A dispărut, dar banii furați de el au circulat imediat prin toate târgurile Olteniei.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>A dat cea mai grea lovitură austriecilor în timpul ocupației Olteniei.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Pavel Lotru era un haiduc care haiducea pe ambii versanți ai Carpaților, atât în Gorj și Vâlcea, cât și prin părțile
+                    Sibiului, unde avea mai multe ibovnice nemțoaice și unguroaice, neveste ale oamenilor de vază din Sibiu.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Află de la o ibovnică că urmează să sosească în Oltenia caravana care strângea impozitele și care venea din Ungaria,
+                    Croația și Transilvania. Caravana venea acum în Oltenia să ridice taxele; erau 20 de căruțe cu pereți metalici, fiecare
+                    trasă de câte opt perechi de cai nemțești, ticsite de pungi cu galbeni.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Nu a dat singur lovitura, deși el a fost capul, ceata lui s-a unit cu cetele de haiduci ale lui Radu Ursan și Neagu
+                    Papură.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Furtul a fost atât de mare încât a produs un adevarat dezechilibru financiar în Imperiul Habsburgic dar, în același
+                    timp, a dus la devalorizarea banilor în Oltenia, precum și la destituirea banului Craiovei apoi la inființarea cetelor
+                    de panduri sub conducere austriacă.</p>
+
+                    <h4 id="hp3.8" class="m-3">Marius Pârv</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Marius Pârv din Ploștina, Gorj a fost un haiduc renumit în zona Gorjului și Mehedințiului, a fost pandur în luptele cu
+                    turcii și căpitan de panduri în Gorj, a fost printre primii care l-au însoțit pe Tudor Vladimirescu și a murit tăiat de
+                    eteriști, apărându-l pe Tudor până la ultima suflare.</p>
+
+                    <h4 id="hp3.9" class="m-3">Anghel Panait</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Anghel Panait, zis Anghel Șaptecai sau Anghel de la ocnă, din Vâlcele, Olt.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Haiduc în pădurea Strehareț la început, apoi în toată Oltenia și până în București. A fost spaima boierilor și domniei
+                    implicându-se în multe atacuri asupra boierilor. A fost și cu Iancu Jianu peste Dunăre.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>S-a făcut cârciumar la Drăgășani, apoi în București, s-a căsătorit cu o femeie bogată, tot cârciumareasă. A murit
+                    otrăvit de aceasta, din gelozie, când l-a prins că în drumurile spre fosta cârciumă din Drăgășani, unde se ducea des să
+                    se aprovizioneze cu vin, avea o ibovnică foarte tânără.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Viața sa a stat la baza filmului românesc Haiducii lui Șaptecai (1970), regizat de Dinu Cocea. Rolul principal a fost
+                    jucat de Florin Piersic.</p>
+
+                    <h4 id="hp3.10" class="m-3">Amza Scorțan</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Amza Scorțan a fost un haiduc din zona Doljului, a luptat mai bine de 30 de ani împotriva tuturor: boieri, austrieci,
+                    fanarioți și turci.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>A fost ucis de poteră în mlaștina de la Vadul Corbului, unde se ascunsese cu oamenii lui, dar au fost vânduți de un
+                    localnic care îi zărise când seîndreptau spre păpuriș. Potera a dat foc păpurișului și stufului și când Amza a încercat
+                    să fugă împreună cu oamenii lui, potera i-a împușcat pe toți, apoi au fost puși în furci la porunca boierului Stanciu.</p>
+
+                    <h4 id="hp3.11" class="m-3">Ionică Lambru</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Ionică Lambru — haiduc din Mehedinți și la bătrânețe pandur, a luptat contra austriecilor, contra turcilor. La bătrânețe
+                    l-a insotit și pe Tudor Vladimirescu deși la vârsta lui alții mergeau sprijiniți în toiag.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Dupa moartea lui Tudor Vladimirescu, s-a retras la munte, trăind singur undeva prin Munții Mehedințiului.</p>
+
+                    <h4 id="hp3.12" class="m-3">Mihail Călimanu</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Mihail Călimanu — haiduc din Vâlcea, a luptat contra habsburgilor, hărțuindu-i în permanență. Se spune ca avea o voce
+                    foarte frumoasă.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>A fost împușcat, în mod ciudat, de ruși. Nu se știe în ce împrejurari.</p>
+
+                    <h4 id="hp3.13" class="m-3">Radu Ursan</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Radu Ursan din Jupânești, Gorj, a fost un haiduc român.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Ceata lui, alături de cetele lui Lotru și Papură, a participat la marea lovitură dată austriecilor de la Drăgășani, în
+                    1726, când au jefuit o mare caravană compusă din 20 de căruțe cu pereți metalici, fiecare trasă de câte opt perechi de
+                    cai, care strânsese taxele din Ungaria, Croația și Ardeal și venise să facă acest lucru și în Oltenia.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Radu Ursan este renumit pentru felul în care îi batjocorea pe soldații imperiali. Aceștia erau dezbrăcați și puși să
+                    joace piese de teatru în pielea goalăși cu măști pe față, spre hazul mesenilor care se adunau ca la teatru cu mic cu
+                    mare ca să vadă comediile. Prizonierii erau puși să joace povești populare.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Descrierea este făcută de contele Maxim Von Bindewald, care fusese trimis să cerceteze furtul, dar a fost luat prizonier
+                    de către mucalitul Ursan, jucând iedul numărul 4. Poveștile erau modificate, erau mai mulți lupi și iezi, pentru că erau
+                    mai mulți prizonieri care trebuiau toți să joace.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Tot contele povestește că Ursan avea obiceiul să țină mai multe zile prizonierii care o rupeau pe românește, foarte
+                    utili la dialogurile din piese. Nu a fost nici el prins de austrieci, dar a murit într-o luptă cu turcii, câțiva ani mai
+                    târziu, tocmai la Caransebeș, într-o bătălie dată în acele locuri.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Așa a dispărut unicul haiduc “regizor”.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Se bănuiește că balada populară “Radul Mamii”, culeasă de pe meleagurile Gorjului, i-ar fi fost dedicată.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>În urma furtului taxelor strânse de funcționarii imperiali, în care au fost implicate cetele de haiduci ale lui Radu
+                    Ursan, Pavel Lotru și Neagu Papură, în 1726 administrația austriacă l-a destituit pe Gheorghe Cantacuzino, Banul
+                    Craiovei, moment în care boierii din Craiova au început acțiunile de împotrivire față de administrația habsburgică.</p>
+
+                    <h4 id="hp3.14" class="m-3">Neagu Papură</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Neagu Papură a fost un haiduc despre care nu se știe decât că ceata lui a participat alături de ceata lui Pavel Lotru la
+                    furtul de la Drăgășani. Apoi a fost urmărit, dar este posibil să fi trecut în Bulgaria pentru un timp.</p>
+
+                    <h4 id="hp3.15" class="m-3">Ene Hățu</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Ene Hățu din Celaru, județul Dolj a fost un haiduc, a cărui ceată haiducea prin Romanați, poterele evitând să-l
+                    urmărească, căci se spune că lega în hațuri oamenii poterelor și arnăuții prinși și îi supunea la chinuri teribile, de
+                    acolo venindu-i și porecla.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Foarte puțini aveau curajul să se apropie de el, ura poterașii și arnăuții mai mult decât pe boieri.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Nu se știu motivele cruzimii și nesecatei dorințe de răzbunare a lui Hățu împotriva arnăuților și poterașilor, dar se
+                    pare ca ei și familiile lor și nu boierii, constituiau ținta lui principală.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>În 1821, la apelul lui Iancu Jianu, s-a alăturat pandurilor lui Tudor Vladimirescu. Apoi în 1848 intră cu ceata lui de
+                    haiduci între revoluționarii lui Popa Șapcă.</p>
+
+                    <h4 id="hp3.16" class="m-3">Popa Șapcă</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Popa Șapcă din Celei (azi devenit cartier al Corabiei), Olt a fost preot, haiduc și revoluționar. Cu el se încheie epoca
+                    haiducilor și pandurilor celebri din Oltenia.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Este unul din organizatorii Marii adunări populare de la Islaz și conducătorul cetelor de haiduci.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Ridică la luptă țăranii și devine unul dintre conducătorii armatei revoluționarilor.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>După înăbușirea revoluției de la 1848 este surghiunit, plecând în exil câțiva ani.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Revine și este curator pe vremea lui Alexandru Ioan Cuza, apoi din 1864 devenind (la recomandarea lui Dimitrie
+                    Bolintineanu) chiar stareț al mănăstirii Cozia.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>I se dusese vestea de mucalit și mare gurmand, se spune ca mânca câte un curcan la masă.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Mai multe străzi din orașele României îi poartă numele (Blaj, Botoșani, Brașov, București, Câmpina, Focșani, Găești,
+                    Pitești, Slatina, Timișoara sau Târgu Jiu). De asemenea Penitenciarul “Popa Șapcă” din Timișoara îi poartă numele precum
+                    și cartierul Popa Șapcă din Pitești.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Alti haiduci, mai din vechime:</p>
+
+                    <h4 id="hp3.17" class="m-3">Baba Novac</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Baba Novac (n. ca. 1530, Poreč, Serbia – d. 5 februarie 1601, Cluj; pronunție [pron. ba-ba no-vac] de la babà = „tată”
+                    în turcă) a fost un haiduc mercenar sârb, luptător consecvent contra Imperiului Otoman, căpitan al oștii de haiduci din
+                    armata lui Mihai Viteazul.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Este erou național al Serbiei și respectat ca personalitate militară în România. În 1601, aflat în solie, este arestat
+                    de autoritățile (Dieta) maghiare din Cluj, judecat sub motivație de jaf, condamnat la moarte și ars pe rug în cetatea
+                    Clujului.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>S-a născut în jurul anului 1530, în Serbia, în satul Poreč (actual Donji Milanovac), pe malul Dunării, aproape de
+                    Cetatea Severinului din mamă româncă (din familia Basarabilor) și tată sârb, pretendent într-o perioadă la tronul
+                    Serbiei.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>A urmat cursurile școlii de la mănăstirea din Poreč, ajungând să vorbească fluent slavona veche. Vorbea deasemeni
+                    românește și grecește.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Baba Novac a fost un vajnic luptător împotriva otomanilor, haiduc în Serbia, apoi în Oltenia, a intrat în slujba lui
+                    Mihai Viteazul, în timpul atacului armatei lui Mihai asupra garnizoanei turcești din Ada Kaleh și i-a rămas fidel până
+                    la moarte.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Prima sa misiune, care l-a ridicat în rândul celor mai apreciați oameni ai lui Mihai Viteazul, a fost incursiunea din
+                    primăvara anului 1595 când în fruntea a 700 de haiduci a trecut Dunărea, a înaintat pâna la munții Balcani, ca să
+                    aștepte oastea turcească condusă de Hasan Pașa care trecea munții pentru a-l întâlni la Sofia pe sultan. Baba Novac a
+                    atacat această oaste punându-l pe fugă pe Hasan și luând căruțele și caii, armele și toată comoara.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>După această victorie Baba Novac primește cinstea voievodului care îl are aproape de sine în toate luptele. Astfel, îl
+                    găsim alături în bătălia din 18/28 octombrie 1599 la Șelimbăr, unde nemaiavând răbdare să aștepte tratativele începute
+                    între episcopul Malaspina, sol al cardinalului Andrei Bathory și Mihai, atacă prin surprindere, contribuind la victoria
+                    obținută de Mihai. A fost descris împăratului Rudolf al II-lea ca unul dintre cei mai apreciați ostași.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>În anul 1600, Baba Novac este trimis de Mihai în Banat, în părțile Lipovei, unde este victorios în mai multe lupte. Apoi
+                    îl însoțește în Moldova, unde Mihai îi încredințase urmărirea lui Ieremia Movilă. Baba Novac ocupă teritoriul Moldovei
+                    și instalează o garnizoană în orașul Iași. În tot timpul campaniei, rapoartele comisarilor împăratului Rudolf al II-lea
+                    ni-l arată pe Baba Novac ca pe unul dintre cei mai apreciați ostași. Urmeazăcucerirea teritoriului până la Camenița și
+                    Hotin.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>A luptat alături de Mihai Viteazul în lupta de la Mirăslău, apoi în 9-19 septembrie 1600 în fruntea unui detașament din
+                    apropiere de Ploiești, la Năieni, reușind să întârzie cu zece zile înaintarea polonezilor, luptă apoi la Sărata, Năieni,
+                    pe 20 octombrie la Bucov, pe Teleajen, ca la sfârșitul lunii noiembrie să se afle la Curtea de Argeș.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>În timp ce se afla cu o solie, Baba Novac a fost arestat de Dieta din Cluj (formată din aristocrația maghiară) și
+                    condamnat la moarte în Cluj, fiind executat prin ardere pe rug la data de 5 februarie 1601. O statuie a lui Baba Novac
+                    se găsește în dreptul Bastionului croitorilor din Cluj.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Motivul arestarii fiind gestul de tradare al lui Baba Novac, care prin preotul ortodox roman Sascu, a trimis o scrisoare
+                    Pasei din Timisoara, in care, contra cost, ii promitea acestuia ca il va instiinta de momentul prielnic, cand turcii vor
+                    putea ataca si ocupa orasele transilvanene Caransebes si Lugoj.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>La 5 februarie 1601, ora 10 a.m. Baba Novac a fost ars pe rug, după care trupul i-a fost tras în țeapă și expus în
+                    dreptul fortificației orașului.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Baba Novac a fost arestat de Ștefan Csaky, unul dintre conducătorii grupării nobiliare care urmărea răsturnarea
+                    situației politice din Transilvania. S-a păstrat și consemnarea cheltuielilor făcute cu execuția: “am dat țiganilor
+                    pentru că au schingiuit, au torturat, au fript și au tras în țeapă pe Baba Novac și pe preotul fl. 7 d. 50 s…t Am plătit
+                    pentru Baba Novac și preotul, celor 2 călăi fl. 3. Am plătit lui Luca aciul (lemnarul), pentru că a cioplitțeapa pentru
+                    Baba Novac fl. 2″.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Execuția a avut loc în prezența autorităților, nobililor și a generalului mercenar Gheorghe Basta care urmărise execuția
+                    de la fereastra unei case din piața orașului punându-l apoi în țeapă pe Drumul Feleacului, pe locul numit azi Piața Baba
+                    Novac.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>La câteva zile după lupta de la Guruslău (3 august 1601), Mihai Viteazul se întoarce biruitor spre orașul Cluj care se
+                    supune imediat, parte dintre nobilii maghiari acoperindu-l cu lingușeli, parte fugind unde au văzut cu ochii. Aflând
+                    locul unde a fost tras în țeapă, Mihai Viteazul pune un steagîn amintirea bravului ostaș și haiduc. În jurul moșiei
+                    dăruite lui Baba Novac de către Mihai Viteazul s-a dezvoltat cartierul craiovean Brazda lui Novac.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Fiii săi (Novăceștii), au fost la rândul lor aprigi luptători antiotomani și protectori ai poporului. A avut un frate,
+                    Radovan, și mai mulți fii, dar cu fiul cel mare, Gruia Novac (despre care s-au scris atâtea balade și s-au țesut atâtea
+                    legende), a apucat să haiducească și să lupte împreună.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>În anul 1936 a fost ridicată la Cluj o troiță pe locul în care fusese expus trupul neînsuflețit al mercenarului sârb.
+                    Aceasta purta inscripția:</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>“În acest loc a fost tras în țeapă Baba Novac generalul lui Mihai Viteazul, după ce a fost ars pe rug în Piața Clujului
+                    împreună cu duhovnicul său în ziua de 5 februarie 1601. Recucerind Ardealul Voevodul Mihaiu a așezat aci între 11-16
+                    august 1601 un steag în cinstea marelui și viteazului său slujitor. Ridicatu-s’a această troiță în Ziua Eroilor 21 Maiu
+                    1936.”</p>
+
+                    <h4 id="hp3.18" class="m-3">Gruia Novac</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Gruia Novac a fost fiul cel mare al lui Baba Novac.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Gruia Novac și frații săi (Novăceștii) apar plasați la început în pădurile Bucovățului, pe dealurile din jurul Craiovei.
+                    Mai târziu, apar trași spre munte spre partea muntoasă a județelor Gorj și Mehedinți.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>În prima jumătate a secolului al-XVII-lea, după moartea lui Mihai Viteazul și a lui Baba Novac, au dus lupte împotriva
+                    turcilor și tătarilor.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>S-au păstrat până în zilele noastre balade despre Gruia Novac, una dintre ele fiind culeasă de Petre Dulfu în perioada
+                    de profesorat la Turnu Severin:</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>“Dinspre munții Lotrului, / Prin strâmtoarea Oltului, / Cine se coboară-n cale, / Către Dunăre la vale? / Colo-n Munții
+                    oltenești, / Sus, la curți mari novăcești, / Plimbă-mi-se prin ceardac, / Trist, feciorul lui Novac: / Din ochi negri
+                    lăcrămând, / De la inimă oftând.”</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>În Moldova este un obicei de Anul Nou închinat Novăceștilor numit ” Banda lui Novac”.</p>
+
+                    <h4 id="hp3.19" class="m-3">Iorgu Iorgovan</h4>
+
+                    <p class="m-1"><w>____</w><w>____</w>Iorgu Iorgovan (Iovan Iorgovan) a fost un haiduc legendar, care a trăit probabil înainte de secolul al XVIII-lea, cel
+                    mai probabil în a doua jumătate a secolului al XVII-lea.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Aproape toate peșterile importante din zona Munților Mehedinți și culoarul montan al Cernei, în special în jurul
+                    localităților Orșova, Baia de Aramă, Băile Herculane și Tismana, apar în folclorul local ca locuri de refugiu ale
+                    acestuia.</p>
+                    <br><br><br>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <script>
+                $(document).ready(() => {
+                    $(".dropdown").on("mouseenter", event => {
+                        $(event.currentTarget.children[0].children[0]).addClass("highlight-cat");
+                        $(event.currentTarget.children[0].children[1]).removeClass("slideup");
+                        $(event.currentTarget.children[0].children[1]).addClass("slidedown");
+                    }).on("mouseleave", event => {
+                        $(event.currentTarget.children[0].children[0]).removeClass("highlight-cat");
+                        $(event.currentTarget.children[0].children[1]).removeClass("slidedown");
+                        $(event.currentTarget.children[0].children[1]).addClass("slideup");
+                    })
+                    $(".dropdown-option").on("mouseenter", event => {
+                        $(event.currentTarget).addClass("highlight-subcat");
+                    }).on("mouseleave", event => {
+                        $(event.currentTarget).removeClass("highlight-subcat");
+                    })
+                    $("#list-of-content").hide();
+                    $(".quicknav").css("height", "60px");
+                    $('#hide-button').hide();
+                    $("#show-button").show();
+
+                    $("#hide-button").on("click", event => {
+                        $("#list-of-content").hide();
+                        $(".quicknav").css("height", "60px")
+                        $('#hide-button').hide();
+                        $("#show-button").show();
+                    })
+                    $("#show-button").on("click", event => {
+                        $("#list-of-content").show();
+                        $(".quicknav").css("height", "910px")
+                        $('#show-button').hide();
+                        $("#hide-button").show();
+                    })
+                })
+            </script>
+        </footer>
+    </div>
+</body>
+
+</html>

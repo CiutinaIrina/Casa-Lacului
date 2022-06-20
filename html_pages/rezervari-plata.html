@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Casa Lacului</title>
+        <link rel="icon" href="..\pics\favicon.png">
+        <link rel="stylesheet" href="../style.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../scripty.js"></script>
+    </head>
+    
+    <body class="container-fluid m-0 p-0 w-100">
+        <div id="site" class="container-fluid m-0 p-0 w-100" style="background-image: url('../pics/background9.jpg')">
+            <header class="h-10">
+                <div class="container-fluid d-flex h-100 w-100">
+                    <div id="logo"class="align-self-center">
+                        <a href="..\index.html"><img src="..\pics\logo3.png"></a>
+                    </div>
+                    <nav id="pc-navbar" class="w-75 text-nowrap">
+                        <ul class="float-right h-100 d-flex" style="list-style: none;">
+                            <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                                <a href="..\index.html" class="h-100"><p class="dropbtn text-size-20">ACASA</p></a>
+                            </li>
+                            <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                                <filler class="h-100">
+                                <p class="dropbtn text-size-20">DESPRE PENSIUNE</p>
+                                <div class="slideup dropdown-content pa">
+                                    <a href="unde-suntem.html"><div class="dropdown-option">Unde suntem?</div></a>
+                                    <a href="ce-va-oferim.html"><div class="dropdown-option">Ce va oferim?</div></a>
+                                    <a href="programul-pensiunii.html"><div class="dropdown-option">Programul pensiunii</div></a>
+                                </div>
+                                </filler>
+                            </li>
+                            <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">   
+                                <filler>
+                                <p class="dropbtn text-size-20">TARIFE SI SERVICII</p>
+                                <div class="slideup dropdown-content pa">
+                                    <a href="tarife.html"><div class="dropdown-option">Tarife</div></a>
+                                    <a href="mancare-bautura.html"><div class="dropdown-option">Mancare si bautura</div></a>
+                                    <a href="rezervari-plata.html"><div class="dropdown-option">Rezervari si Plata</div></a>
+                                    <a href="termeni-conditii.html"><div class="dropdown-option">Termeni si conditii</div></a>
+                                </div>
+                                </filler>
+                            </li>
+                            <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                                <a href="galerie.html" class="h-100"><p class="dropbtn mb-3 text-size-20">GALERIE FOTO</p></a>
+                            </li>
+                            <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                                <filler>
+                                <p class="dropbtn text-size-20">INFORMATII UTILE</p>
+                                <div class="slideup dropdown-content pa">
+                                    <a href="ce-facem.html"><div class="dropdown-option">Ce poti face la noi</div></a>
+                                    <a href="valea-lotrului.html"><div class="dropdown-option">Valea Lotrului</div></a>
+                                    <a href="haiduci-paduri.html"><div class="dropdown-option">Haiduci si Paduri</div></a>
+                                    <a href="siguranta.html"><div class="dropdown-option">Informatii pentru siguranta dvs.</div></a>
+                                </div>
+                                </filler>
+                            </li>
+                            <li class="dropdown position-relative h-100 mt-5 mx-3 text-special">
+                                <a href="contact.html"><p class="dropbtn mb-3 text-size-20">CONTACT/REZERVARE</p></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav id="mobile-navbar">
+                        <div class="h-100 w-100 text-center">
+                            <img class="h-50 w-50 mt-4 picture-white" id="hamburger" src="..\pics\hamburger.png">
+                        </div>
+                    </nav>
+                </div>
+                <div id="mobile-navbar-dropdown" class="slideup text-special">
+                    <ul class="m-0 p-0" style="list-style: none;">
+                        <li class="position-relative h-100 text-special">
+                            <a href="..\index.html" class="h-100"><p class="pl-4 py-0 m-0 text-size-20 text-special">ACASA</p></a>
+                        </li>
+                        <li class="position-relative h-100 text-special">
+                            <filler class="h-100 d-flex justify-content-between">
+                            <p class="pl-4 py-0 m-0 text-size-20">DESPRE PENSIUNE</p>
+                            <img id="arrow-1" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="..\pics\up.png">
+                            </filler>
+                        </li>
+                        <div id="arrow-dropdown-1" class="slideup pl-5">
+                            <a href="unde-suntem.html"><div class="text-special">Unde suntem?</div></a>
+                            <a href="ce-va-oferim.html"><div class="text-special">Ce va oferim?</div></a>
+                            <a href="programul-pensiunii.html"><div class="text-special">Programul pensiunii</div></a>
+                        </div>
+                        <li class="position-relative h-100 text-special">   
+                            <filler class="h-100 w-100 d-flex justify-content-between">
+                            <p class="pl-4 py-0 m-0 text-size-20 w-90">TARIFE SI SERVICII</p>
+                            <img id="arrow-2" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="..\pics\up.png">
+                            </filler>
+                        </li>
+                        <div id="arrow-dropdown-2" class="slideup pl-5">
+                            <a href="tarife.html"><div class="dropdown-option text-special">Tarife</div></a>
+                            <a href="mancare-bautura.html"><div class="dropdown-option text-special">Mancare si bautura</div></a>
+                            <a href="rezervari-plata.html"><div class="dropdown-option text-special">Rezervari si Plata</div></a>
+                            <a href="termeni-conditii.html"><div class="dropdown-option text-special">Termeni si conditii</div></a>
+                        </div>
+                        <li class="position-relative h-100 text-special">
+                            <a href="galerie.html" class="h-100"><p class="pl-4 py-0 m-0 text-size-20 text-special">GALERIE FOTO</p></a>
+                        </li>
+                        <li class="position-relative h-100 text-special">
+                            <filler class="h-100 d-flex justify-content-between">
+                            <p class="pl-4 py-0 m-0 text-size-20">INFORMATII UTILE</p>
+                            <img id="arrow-3" onClick="flip(this)" class="arrow-dropdown picture-white mr-4 mt-1 i-5" src="..\pics\up.png">
+                            </filler>
+                        </li>
+                        <div id="arrow-dropdown-3" class="slideup pl-5">
+                            <a href="ce-facem.html"><div class="dropdown-option text-special">Ce poti face la noi</div></a>
+                            <a href="valea-lotrului.html"><div class="dropdown-option text-special">Valea Lotrului</div></a>
+                            <a href="haiduci-paduri.html"><div class="dropdown-option text-special">Haiduci si Paduri</div></a>
+                            <a href="siguranta.html"><div class="dropdown-option text-special">Informatii pentru siguranta dvs.</div></a>
+                        </div>
+                        <li class="position-relative h-100 text-special">
+                            <a href="contact.html"><p class="pl-4 py-0 m-0 mb-3 text-size-20 text-special">CONTACT/REZERVARE</p></a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <section class="h-80 w-100">
+                <div class="container-fluid h-100 w-100 pb-2">
+                    <div class="container-fluid box-color w-50 justify-content-center text-special mt-5">
+
+                    <h1>Rezervari si Plata</h1>
+                    <h2 class="m-4">Rezervari</h2>
+
+                    <p class="m-1"><w>____</w><w>____</w>Rezervarea camerei este garantata numai dupa plata a 30% din valoare in avans. In multe situatii nu o sa va cerem avans, dar cel mai sigur e sa platiti.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Daca nu ati platit avansul este foarte important sa confirmati cu cel putin 2 zile inainte. Daca nu, riscati sa va pierdeti rezervarea. Puteti sa ne sunati pe telefon,
+                        sa ne trimiteti un SMS sau un mail.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>De asemenea, o rezervare cu avans are prioritate fata de una fara (si poate anula una fara), in cazul in care e dorita in aceasi perioada. Daca nu ati platit avans, asigurati-va
+                        ca ne-ati trimis numarul de telefon ca sa va putem contacta.</p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Daca stiti ca ajugenti dupa orele 14:00 si <b>NU</b> ati platit avans, sunati-ne sa va asteptam. Dupa ora 14:00, daca nu auzim nimic de la dvs., <b>consideram camera
+                         libera</b></p>
+
+                    <p class="m-1"><w>____</w><w>____</w>Daca se intampla ceva in programul dvs. si nu mai puteti veni, anulati cat mai devreme. Daca primim anularea cu 15 zile inainte de eveniment, va dam banii inapoi. Daca nu, nu
+                        o sa va putem returna banii. </p>
+
+                    <h2 class="m-4">Plata</h2>
+
+                    <p class="m-1"><w>____</w><w>____</w>Plata sejurului se poate face doar prin bani numerari.</p>
+                    <br><br><br>
+
+                </div>
+            </section>
+            <footer class="w-100">
+                <script>
+                    $(document).ready(() => {
+                        $(".dropdown").on("mouseenter", event => {
+                            $(event.currentTarget.children[0].children[0]).addClass("highlight-cat");
+                            $(event.currentTarget.children[0].children[1]).removeClass("slideup");
+                            $(event.currentTarget.children[0].children[1]).addClass("slidedown");
+                        }).on("mouseleave", event => {
+                            $(event.currentTarget.children[0].children[0]).removeClass("highlight-cat");
+                            $(event.currentTarget.children[0].children[1]).removeClass("slidedown");
+                            $(event.currentTarget.children[0].children[1]).addClass("slideup");
+                        })
+                        $(".dropdown-option").on("mouseenter", event => {
+                            $(event.currentTarget).addClass("highlight-subcat");
+                        }).on("mouseleave", event => {
+                            $(event.currentTarget).removeClass("highlight-subcat");
+                        })
+                    })
+                </script>
+            </footer>
+        </div>
+</body>
+
+</html>

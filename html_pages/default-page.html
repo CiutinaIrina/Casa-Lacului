@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Casa Lacului</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="../scripty.js"></script>
+</head>
+
+<body class="nm">
+    <div id="site" style="background-image: url('../pics/background.jpg')">
+        <header>
+            <div class="df">
+                <div id="logo">
+                    <a href="../index.html"><img src="..\pics\logo3.png"></a>
+                </div>
+                <nav id="menu" class="pr fl">
+                    <ul id="menu-list" class="nm df nb fl  pa">
+                        <li class="pr op dropdown">
+                            <a href="../index.html">
+                                <p class="op-title dropbtn">ACASA</p>
+                            </a>
+                        </li>
+                        <li class="pr op dropdown">
+                            <filler>
+                                <p class="op-title dropbtn">DESPRE PENSIUNE</p>
+                                <div class="slideup dropdown-content pa">
+                                    <a href="unde-suntem.html">
+                                        <div class="dropdown-option">Unde suntem?</div>
+                                    </a>
+                                    <a href="ce-va-oferim.html">
+                                        <div class="dropdown-option">Ce va oferim?</div>
+                                    </a>
+                                    <a href="programul-pensiunii.html">
+                                        <div class="dropdown-option">Programul pensiunii</div>
+                                    </a>
+                                </div>
+                            </filler>
+                        </li>
+                        <li class="pr op dropdown">
+                            <filler>
+                                <p class="op-title dropbtn">TARIFE SI SERVICII</p>
+                                <div class="slideup dropdown-content pa">
+                                    <a href="tarife.html">
+                                        <div class="dropdown-option">Tarife</div>
+                                    </a>
+                                    <a href="mancare-bautura.html">
+                                        <div class="dropdown-option">Mancare si bautura</div>
+                                    </a>
+                                    <a href="rezervari-plata.html">
+                                        <div class="dropdown-option">Rezervari si Plata</div>
+                                    </a>
+                                    <a href="termeni-conditii.html">
+                                        <div class="dropdown-option">Termeni si conditii</div>
+                                    </a>
+                                </div>
+                            </filler>
+                        </li>
+                        <li class="pr op dropdown">
+                            <a href="galerie.html">
+                                <p class="op-title dropbtn">GALERIE FOTO</p>
+                            </a>
+                        </li>
+                        <li class="pr op dropdown">
+                            <filler>
+                                <p class="op-title dropbtn">INFORMATII UTILE</p>
+                                <div class="slideup dropdown-content pa">
+                                    <a href="ce-facem.html">
+                                        <div class="dropdown-option">Ce poti face la noi</div>
+                                    </a>
+                                    <a href="valea-lotrului.html">
+                                        <div class="dropdown-option">Valea Lotrului</div>
+                                    </a>
+                                    <a href="haiduci-panduri.html">
+                                        <div class="dropdown-option">Haiduci si Panduri</div>
+                                    </a>
+                                    <a href="siguranta.html">
+                                        <div class="dropdown-option">Informatii pentru siguranta dvs.</div>
+                                    </a>
+                                </div>
+                            </filler>
+                        </li>
+                        <li class="pr op dropdown">
+                            <a href="contact.html">
+                                <p class="op-title dropbtn">CONTACT/REZERVARE</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="">
+            <div id="main" class="full pr" style="height:2000px">
+                
+            </div>
+        </section>
+        <footer>
+            <script>
+                $(document).ready(() => {
+                    $(".dropdown").on("mouseenter", event => {
+                        $(event.currentTarget.children[0].children[0]).addClass("highlight-cat");
+                        $(event.currentTarget.children[0].children[1]).removeClass("slideup");
+                        $(event.currentTarget.children[0].children[1]).addClass("slidedown");
+                    }).on("mouseleave", event => {
+                        $(event.currentTarget.children[0].children[0]).removeClass("highlight-cat");
+                        $(event.currentTarget.children[0].children[1]).removeClass("slidedown");
+                        $(event.currentTarget.children[0].children[1]).addClass("slideup");
+                    })
+                    $(".dropdown-option").on("mouseenter", event => {
+                        $(event.currentTarget).addClass("highlight-subcat");
+                    }).on("mouseleave", event => {
+                        $(event.currentTarget).removeClass("highlight-subcat");
+                    })
+                })
+            </script>
+        </footer>
+    </div>
+</body>
+
+</html>
